@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Morris;
+    src: url(./assets/fonts/morris.ttf) format("opentype");
+}
+
+* {
+    font-family: Morris;
+  }
