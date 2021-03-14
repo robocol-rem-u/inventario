@@ -1,1 +1,87 @@
-<p>registro-formulario works!</p>
+<div class="out">
+    <div class="container">
+        <form action="action_page.php">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Nombre</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Ingresa el nombre del producto">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Proveedor</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="vistronica">Vistrónica</option>
+                <option value="nasa">NASA</option>
+                <option value="elmono">El Mono</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Responsable</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="¿Quén tiene el producto?">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Ubucación</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="¿Dónde está el producto?">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Estado</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="prestado">Prestado</option>
+                <option value="dañado">Dañado</option>
+                <option value="mediodañado">Medio dañado</option>
+                <option value="mediodañado">Funcional</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="country">Subsistema</label>
+            </div>
+            <div class="col-75">
+              <select id="country" name="country">
+                <option value="interfaz">Interfaz</option>
+                <option value="traccion">Tracción</option>
+                <option value="sensorica">Sensórica</option>
+                <option value="brazo">Brazo</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Descripción</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Escribe una breve descripción del producto" style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Comentarios</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Comentarios adicionales">
+            </div>
+          </div>
+          <div class="row" style="margin-top: 12px;">
+            <input type="submit" value="Guardar">
+          </div>
+        </form>
+      </div>
+</div>
