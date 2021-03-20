@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlanCompraFormularioComponent implements OnInit
 {
+  // $('.selector').html('Dynamic Content Here') // jQuery selector
+
   constructor() { }
   ngOnInit(): void
   {
   }
+
+  // textElement.textContent = "What's up?";
 }

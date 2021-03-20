@@ -1,0 +1,42 @@
+<!-- <button (click)="render()" style="color: white;">Render dynamic component</button>
+<div>{{msg}}</div> -->
+
+<!-- <table>
+	<tr *ngFor="let item of lista">
+		<td>
+			{{item}}
+		</td>
+	</tr>
+</table> -->
+<div *ngFor="let item of lista">
+	<div class="list-group text-warning">
+		<a href="/planCompra/producto1" class="list-card text-warning">
+			<h5 class="list-title">{{item}}</h5>
+			<div class="row" id="list-row">
+				<div class="col" id ="list-col">
+					<p class="list-text">   Categoría</p>
+					<hr>
+					<p class="list-text">   Pedido No.</p>
+					<div class="list-info">
+						Cotización No.:<br>
+						Inventario:<br>
+						Fecha compra:<br>
+						Contribuyente:<br>
+						Proveedor:<br>
+					</div>
+					<br>
+				</div>
+				<div class="col" id ="list-col">
+					<br>
+					<button class="list-button">Editar</button>
+					<br>
+					<br>
+					<img class="img" src="../../../assets/images/FotoFactura_white_bg.gif" alt="Imagen"/>
+					<p class="list-text">ESTADO</p>
+					<p class="list-text">Comprado</p>
+				</div>
+			</div>
+		</a>
+	</div>
+	<br>
+</div>
