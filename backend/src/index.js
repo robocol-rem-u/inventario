@@ -1,4 +1,6 @@
+require("./database")
 const app = require("./app")
+
 
 //Usamos nodemon para no tener que reiniciar el servidor cada vez que cambiamos el código
 //En el package.json, dependencies son las dependencias usadas en producción, devDependencies son las que se usan en el desarrollo

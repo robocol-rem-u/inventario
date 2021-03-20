@@ -1,0 +1,5 @@
+const mongoose = require("mongoose")
+
+mongoose.connect("mongodb+srv://dbUser:<password>@cluster0.ar4g6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority").
+then((db) => console.log("DB is connected")).
+catch((err) => console.error(err))
