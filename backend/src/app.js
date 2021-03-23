@@ -15,5 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.use("/api/products", require("./routes/products.routes"))
+app.use("/api/pedidos", require("./routes/pedido.routes"))
 
 module.exports = app
