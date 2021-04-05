@@ -6,10 +6,13 @@ const morgan = require("morgan")
 
 const app = express()
 
+const cors = require("cors")
+
 //Le damos el valor del puerto como una variable
 //Si puede usar el puerto de la variable de entorno lo usa, si no, usa el 4000
 app.set("port", process.env.PORT || 4000)
 
+app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));

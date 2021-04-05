@@ -8,6 +8,13 @@
 * {
     font-family: Morris;
     background-color: #161616;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html{
+    font-size: 62.5%;
   }
 @import "~igniteui-angular/lib/core/styles/themes/index";
 // Uncomment the following lines if you want to add a custom palette:

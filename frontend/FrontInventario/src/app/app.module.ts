@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
+import {HttpClientModule} from '@angular/common/http'
 // Igx
 import { IgxListModule } from 'igniteui-angular';
-// Registro
-import { RegistroModule } from './registro/registro.module';
-import { RegistroPrincipalComponent } from './registro/registro-principal/registro-principal.component';
+// Registro de Producto
+import { RegistroProductoModule } from './modules/registro-producto/registro-producto.module';
+import { RegistroProductoPrincipalComponent } from './modules/registro-producto/registro-producto-principal/registro-producto-principal.component';
 // Plan de compra
 import { PlanCompraModule } from './planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './planCompra/planCompra-principal/planCompra-principal.component';
@@ -22,9 +23,10 @@ import { Menu_opcionesComponent } from './menu_opciones/menu_opciones.component'
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    RegistroModule,
+    RegistroProductoModule,
+    HttpClientModule,
     RouterModule.forRoot([
-      { path: 'registro', component: RegistroPrincipalComponent },
+      { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
       { path: 'planCompra', component: PlanCompraPrincipalComponent },
       { path: 'registroUsuario', component: Registro_usuarioComponent },
       { path: 'menu', component: Menu_opcionesComponent },
