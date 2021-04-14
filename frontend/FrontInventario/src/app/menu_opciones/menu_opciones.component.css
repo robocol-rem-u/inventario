@@ -32,3 +32,15 @@ img {
   margin: auto;
   margin-top: 20px;
 }
+button{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+#atras{
+  height: 35px;
+  padding-left: 3%;
+  padding-top: 5px;
+}
+
+

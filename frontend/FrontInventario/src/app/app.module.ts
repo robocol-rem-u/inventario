@@ -13,12 +13,12 @@ import { RegistroProductoPrincipalComponent } from './modules/registro-producto/
 // Plan de compra
 import { PlanCompraModule } from './planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './planCompra/planCompra-principal/planCompra-principal.component';
-//Registro de usuario
-import { Registro_usuarioModule } from './registro_usuario/registro_usuario.module';
-import { Registro_usuarioComponent } from './registro_usuario/registro_usuario.component';
 //menu de opciones
 import { Menu_opcionesModule } from './menu_opciones/menu_opciones.module';
 import { Menu_opcionesComponent } from './menu_opciones/menu_opciones.component';
+import { IngresoUsuarioModule } from './ingreso-usuario/ingreso-usuario.module';
+import { IngresoUsuarioComponent } from './ingreso-usuario/ingreso-usuario.component';
+import { HistorialComponent } from './historial/historial.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -28,14 +28,16 @@ import { Menu_opcionesComponent } from './menu_opciones/menu_opciones.component'
     RouterModule.forRoot([
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
       { path: 'planCompra', component: PlanCompraPrincipalComponent },
-      { path: 'registroUsuario', component: Registro_usuarioComponent },
       { path: 'menu', component: Menu_opcionesComponent },
+      { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
+      { path:'', pathMatch:'full', redirectTo: 'ingreso-usuario'},
+      { path: 'historial', component: HistorialComponent}
     ]),
     BrowserAnimationsModule,
     FormsModule,
     IgxListModule,
-    Registro_usuarioModule,
     Menu_opcionesModule,
+    IngresoUsuarioModule
   ],
   providers: [],
   bootstrap: [AppComponent],
