@@ -14,11 +14,11 @@ import { RegistroProductoPrincipalComponent } from './modules/registro-producto/
 import { PlanCompraModule } from './planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './planCompra/planCompra-principal/planCompra-principal.component';
 //menu de opciones
-import { Menu_opcionesModule } from './menu_opciones/menu_opciones.module';
-import { Menu_opcionesComponent } from './menu_opciones/menu_opciones.component';
-import { IngresoUsuarioModule } from './ingreso-usuario/ingreso-usuario.module';
-import { IngresoUsuarioComponent } from './ingreso-usuario/ingreso-usuario.component';
-import { HistorialComponent } from './historial/historial.component';
+import { Menu_opcionesModule } from './modules/menu_opciones/menu_opciones.module';
+import { Menu_opcionesComponent } from './modules/menu_opciones/menu_opciones.component';
+import { IngresoUsuarioModule } from './modules/ingreso-usuario/ingreso-usuario.module';
+import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuario.component';
+import { HistorialComponent } from './modules/historial/historial.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [
