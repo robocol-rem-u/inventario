@@ -1,4 +1,6 @@
 const {Schema, model} = require("mongoose")
+const { appConfig } = require("../../config")
+const app = require("../app")
 
 const productoSchema = new Schema(
     {
@@ -13,12 +15,22 @@ const productoSchema = new Schema(
         comentariosExtra: {type: String, required: true},
         disponibleParaUso: {type: Number, required: true},
         disponibleParaArreglo: {type: Number, required: true},
-        foto: {type: String, required: true}
+        fotoPath: {type: String},
     },
     {
         timestamps: true,
         versionKey: false,
     }
 );
+
+//Mongoose nos permite crear métodos a nuestros esquemas:
+productoSchema.methods.setImgUrl = function setImgUrl (fileName){
+    //Debería ser así, pero por alguna razón no funciona
+    /*
+    const { host, port } = appConfig
+    this.fotoPath = `${host}:${port}/public/${fileName}`
+    */
+    this.fotoPath = `http://localhost:4000/public/${fileName}`
+}
 
 module.exports = model("Producto", productoSchema);
