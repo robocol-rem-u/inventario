@@ -13,9 +13,6 @@ import { RegistroProductoPrincipalComponent } from './modules/registro-producto/
 // Plan de compra
 import { PlanCompraModule } from './modules/planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './modules/planCompra/planCompra-principal/planCompra-principal.component';
-//Registro de usuario
-import { Registro_usuarioModule } from './registro_usuario/registro_usuario.module';
-import { Registro_usuarioComponent } from './registro_usuario/registro_usuario.component';
 //menu de opciones
 import { Menu_opcionesModule } from './modules/menu_opciones/menu_opciones.module';
 import { Menu_opcionesComponent } from './modules/menu_opciones/menu_opciones.component';
