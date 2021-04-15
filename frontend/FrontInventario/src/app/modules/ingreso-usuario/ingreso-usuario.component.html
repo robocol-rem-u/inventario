@@ -1,6 +1,6 @@
 <div id="fondo">
   <div class="container">
-    <form action="action_page.php">
+    <form   [formGroup]="userForm" (ngSubmit)= "onLogin(userForm)">
       <div class="row">
         <img
           style="height: 48px; padding: 2px 10px"
@@ -13,7 +13,7 @@
           <label for="fname" style="padding-top: 0px">USUARIO ROBOCOL</label>
         </div>
         <div class="col-75">
-          <input type="text" id="fname" name="firstname" />
+          <input novalidate id="usuarioUniandes"  formControlName="usuarioUniandes"  type="text"  />
         </div>
       </div>
       <div class="row">
@@ -22,23 +22,23 @@
         </div>
         <div class="col-75">
           <input
+           id="contrasenia"  formControlName="contrasenia"
             type="password"
-            id="psw"
             name="psw"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            title="Debe contener al menos un número y una letra mayúscula y minúscula,
-             y al menos 8 o más caracteres"
+            title="Debe contener al menos 9 o más caracteres"
             required
           />
         </div>
       </div>
       <div class="row">
-        <input
+        <button
           type="submit"
           value="INGRESAR"
           id="ingresar"
           style="margin-top: 15px; width: 150px"
-        />
+          [disabled]='!userForm'
+        >
+      INGRESAR</button>
       </div>
     </form>
   </div>

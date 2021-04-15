@@ -29,7 +29,7 @@ label {
 }
 
 /* Style the submit button */
-input[type="submit"] {
+input[type="submit"], button {
   background-color: #282828;
   color: #e4b503;
   padding: 12px 20px;
@@ -80,7 +80,7 @@ input[type="submit"] {
 @media screen and (max-width: 600px) {
   .col-25,
   .col-75,
-  input[type="submit"] {
+  input[type="submit"], button {
     width: 100%;
     margin-top: 0;
     /* margin-left: ; */

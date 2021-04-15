@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Usuario } from '../../models/usuario';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
-
+import { BehaviorSubject, Observable } from 'rxjs';
+import { JwtResponseUser } from 'src/app/models/JwtResponseUser';
+import { tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,6 +12,9 @@ export class UsuarioService {
 
 private apiUrl = environment.baseUrl + 'usuario'
 //URL_API= "http://localhost:4000/api/usuario"
+authSubject = new BehaviorSubject(false);
+private token: string;
+
 constructor(private http:HttpClient) { }
 headers: HttpHeaders= new HttpHeaders({
   "Content-Type": "application/json"
@@ -26,8 +30,33 @@ postUsuario(){}
 updateUsuario(){}
 deleteUsuario(){}
 
-loginUser(usuarioUniandes:String, contrasenia:String){
-//:Observable <Usuario>{
-  //return this.http.get<Usuario[]> (this.apiUrl)
+loginUser(usuario: Usuario):Observable <JwtResponseUser>{
+  return this.http.post<JwtResponseUser> (this.apiUrl+"/login", usuario).pipe(
+    tap((res: JwtResponseUser)=> {
+      if (res){
+        //guardar token
+        this.saveToken(res.dataUser.accessToken, res.dataUser.expiresIn)
+      }
+    })
+  );
+}
+
+logout(): void {
+  this.token = '';
+  localStorage.removeItem("ACCESS_TOKEN");
+  localStorage.removeItem("EXPIRES_IN");
+}
+
+private saveToken(token: string, expiresIn: string): void {
+  localStorage.setItem("ACCESS_TOKEN", token);
+  localStorage.setItem("EXPIRES_IN", expiresIn);
+  this.token = token;
+}
+
+private getToken(): string {
+  if (!this.token) {
+    this.token = localStorage.getItem("ACCESS_TOKEN");
+  }
+  return this.token;
 }
 }
