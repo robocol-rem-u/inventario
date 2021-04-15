@@ -19,5 +19,6 @@ app.use(express.urlencoded({extended:false}));
 
 app.use("/api/products", require("./routes/products.routes"))
 app.use("/api/pedidos", require("./routes/pedido.routes"))
+app.use("/api/usuarios", require("./routes/usuario.routes"))
 
 module.exports = app

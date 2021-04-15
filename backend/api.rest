@@ -9,3 +9,28 @@ Content-Type: application/json
     "nombre": "JETSON",
     "cantidad": "5"
 }
+
+###
+POST http://localhost:4000/api/usuarios
+Content-Type: application/json
+
+{
+    "usuarioUniandes":"mario.xd" ,
+    "nombre": "maria",
+    "contrasenia": "123a", 
+    "admin": false , 
+    "lider": false
+}
+
+###
+GET http://localhost:4000/api/usuarios
+
+###
+POST http://localhost:4000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "usuarioUniandes":"mario.xd" ,
+    "contrasenia": "123a"
+
+}
