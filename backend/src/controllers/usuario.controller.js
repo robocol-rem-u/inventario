@@ -57,10 +57,11 @@ usuarioCtrl.loginUser = async (req, res) =>{
           const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: expiresIn });
   
           const dataUser = {
-            name: user.name,
-            email: user.email,
-            accessToken: accessToken,
-            expiresIn: expiresIn
+            nombre: user.nombre, 
+            admin: user.admin, 
+            lider: user.lider, 
+            accessToken:accessToken, 
+            expiresIn:expiresIn
           }
           res.send({ dataUser });
         } else {

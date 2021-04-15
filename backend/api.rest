@@ -23,10 +23,10 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:4000/api/usuarios
+GET http://localhost:4000/api/usuario
 
 ###
-POST http://localhost:4000/api/usuarios/login
+POST http://localhost:4000/api/usuario/login
 Content-Type: application/json
 
 {
