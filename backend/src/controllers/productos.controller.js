@@ -9,8 +9,15 @@ productosCtrl.getProductos = async (req, res) => {
 //productosCtrl.getProductoNombre = (req, res) => {
 
 //}
+
+//En mi request req, gracias a multer, tenemos un campo llamado image
 productosCtrl.createProducto = async (req, res) => {
     const newProducto = new Producto(req.body)
+    //Si el req viene con archivo...
+    if(req.file){
+        const {fileName} = req.file.filename
+        newProducto.setImgUrl(req.file.filename)
+    }
     await newProducto.save()
     res.send("Create Producto")
 }

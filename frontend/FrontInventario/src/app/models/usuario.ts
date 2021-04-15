@@ -1,9 +1,18 @@
 export class Usuario {
-  admin: boolean
-  contrasenia: string
-  createdAt: string
-  lider: boolean
+  usuarioUniandes : string
   nombre: string
-  updatedAt: string
-  _id: string
+  contrasenia: string
+  admin: boolean
+  lider: boolean
+  //createdAt: string
+  //updatedAt: string
+  //_id: string
+
+  constructor(usuarioUniandes: string,  nombre: string, contrasenia: string, admin: boolean,lider: boolean,){
+    this.usuarioUniandes= usuarioUniandes,
+    this.nombre= nombre,
+    this.contrasenia= contrasenia
+    this.admin=admin
+    this.lider=lider
+  }
 }
