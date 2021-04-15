@@ -34,3 +34,15 @@ Content-Type: application/json
     "contrasenia": "123a"
 
 }
+
+###
+GET  http://localhost:4000/api/compras
+
+###
+POST http://localhost:4000/api/compras
+Content-Type: application/json
+
+{
+    "nombre": "JETSON",
+    "cantidad": "5"
+}

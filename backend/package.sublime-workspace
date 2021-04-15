@@ -1,0 +1,472 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"avalon",
+				"avalon-pwm"
+			],
+			[
+				"co",
+				"col-sm-4"
+			],
+			[
+				"sensib",
+				"sensibility"
+			],
+			[
+				"in",
+				"index_max"
+			],
+			[
+				"Compo",
+				"ComponentFactoryResolver"
+			],
+			[
+				"componentFactoryResolver",
+				"ComponentFactoryResolver"
+			],
+			[
+				"com",
+				"componentFactoryResolver"
+			],
+			[
+				"Com",
+				"ComponentFactoryResolver"
+			],
+			[
+				"On",
+				"OnDestroy\tinterface"
+			],
+			[
+				"pl",
+				"planCompra-productos.component\tscript"
+			],
+			[
+				"plan",
+				"planCompra-productos\tdirectory"
+			],
+			[
+				"pla",
+				"app-plancompra-productos"
+			],
+			[
+				"pa",
+				"planCompra-principal"
+			],
+			[
+				"pad",
+				"padding-bottom\tproperty"
+			],
+			[
+				"ba",
+				"background-color\tproperty"
+			],
+			[
+				"mar",
+				"margin-top\tproperty"
+			],
+			[
+				"marg",
+				"margin-left\tproperty"
+			],
+			[
+				"list-ot",
+				"list-group-item-dark"
+			],
+			[
+				"col",
+				"col-25"
+			],
+			[
+				"u",
+				"ul\tTag"
+			],
+			[
+				"bli",
+				"blink_times"
+			],
+			[
+				"pr",
+				"prescaller"
+			],
+			[
+				"h2p",
+				"h2p_lw_led_addr"
+			],
+			[
+				"K",
+				"KDIR"
+			],
+			[
+				"tes",
+				"testebbchar"
+			],
+			[
+				"bu",
+				"builddirs"
+			],
+			[
+				"fu",
+				"fun_exit"
+			],
+			[
+				"pri",
+				"printk"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"SCP",
+				"SCP_TARGET_IP"
+			],
+			[
+				"dire",
+				"directory"
+			],
+			[
+				"sta",
+				"start_time"
+			],
+			[
+				"ra",
+				"random"
+			],
+			[
+				"gro",
+				"groupName\tlet"
+			],
+			[
+				"get",
+				"getTabs2"
+			],
+			[
+				"cah",
+				"changeColor"
+			],
+			[
+				"star",
+				"startGame"
+			],
+			[
+				"ve",
+				"vehicle"
+			],
+			[
+				"Ug",
+				"UgOpt"
+			],
+			[
+				"button",
+				"buttonCreate"
+			],
+			[
+				"ta",
+				"targets"
+			],
+			[
+				"po",
+				"points"
+			],
+			[
+				"rot",
+				"rotate"
+			],
+			[
+				"v",
+				"vehicle"
+			],
+			[
+				"ang",
+				"angle"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 252.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/franz/Documents/TESIS/Editores Diagramas",
+		"/home/franz/Documents/TESIS/Comandos",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/avalon_pwm/avalon_pwm.c",
+		"/home/franz/catkin_ws/src/robocol_ur3/ur3_move_robocol/src/keyboard_control.py",
+		"/home/franz/Documents/TESIS/FINAL/custom_leds_hw.tcl",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur_gazebo/launch/ur3.launch",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/config/ur3.srdf",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/config/controllers.yaml",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/launch/ur3_moveit_planning_execution.launch",
+		"/home/franz/Documents/TESIS/ERRORES",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/config/ompl_planning.yaml",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/config/kinematics.yaml",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/config/joint_limits.yaml",
+		"/home/franz/catkin_ws/src/robocol_ur3/robocol_ur3_moveit_config/config/fake_controllers.yaml",
+		"/home/franz/Documents/TESIS/FINAL/avalon_pwm_hw.tcl",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/custom_pwm/devmem_pwm.c",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/custom_prescaller/devmem_prescaller.c",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/hps_0.h",
+		"/home/franz/fpga_ws/src/fpga_pkg/CMakeLists.txt",
+		"/home/franz/fpga_ws/src/CMakeLists.txt",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/avalon_pwm/Makefile",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/pwm_avalon_bridge/pwm_avalon_bridge.c",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/pwm_avalon_bridge/devmem_pwm_avalon_bridge.c",
+		"/home/franz/catkin_ws/src/rover/scripts/node_fpga.py",
+		"/home/franz/fpga_ws/src/fpga_pkg/src/fpga_node.cpp",
+		"/home/franz/catkin_ws/src/controlers/scripts/node_joystick_traction.py",
+		"/home/franz/Documents/Robocol/Brazo/pick_place_tutorial.cpp",
+		"/home/franz/Documents/TESIS/FINAL/soc_system.dts",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/custom_leds/Makefile",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/custom_pwm/Makefile",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/pwm_avalon_bridge/Kbuild",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/pwm_avalon_bridge/Makefile",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/pwm_avalon_bridge/Makefile",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/pwm_avalon_bridge/devmem_pwm_avalon_bridge",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/count/devmem_count.c",
+		"/home/franz/Documents/TESIS/FINAL/MOTOR_ENCODER/soc_system.dts",
+		"/home/franz/Documents/TESIS/FINAL/pwm_avalon_bridge_hw.tcl",
+		"/home/franz/catkin_ws/src/controlers/scripts/joystick_cmd_vel.py",
+		"/home/franz/catkin_ws/src/master_msgs/msg/traction_Orders.msg",
+		"/home/franz/Documents/TESIS/FINAL/pwm_bridge_hw.tcl",
+		"/home/franz/Documents/TESIS/FINAL/custom_count_hw.tcl",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/generate_hps_qsys_header.sh",
+		"/home/franz/Documents/U/py/p1.py",
+		"/home/franz/Documents/U/py/Filtros/Functions.py",
+		"/home/franz/Documents/U/py/p3.py",
+		"/home/franz/Documents/U/py/Filtros/Lab.py",
+		"/home/franz/Documents/U/py/Filtros/TEST.py",
+		"/home/franz/Documents/U/py/girospunto1_1_26_mat.mat",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/Interfaz/ConsumerFiles/Rover/fpga.py",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/live/live.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/sensorica.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/sensorica.component.css",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/eva/eva.component.css",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/eva/eva.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/tabs/tabs.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/analysis/analysis.component.html",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/count/Makefile",
+		"/home/franz/Documents/U/SABER PRO/Número Registro.txt",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/brazo/live/live.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/eva/eva.component.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/brazo/brazo-pestania/brazo-pestania.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/live/live.component.css",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/Interfaz/ConsumerFiles/Rover/sensors.py",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/measurements/measurements.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/sensorica/measurements/measurements.component.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/Interfaz/models.py",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/Interfaz/ConsumerFiles/Rover/arm.py",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/params/params.component.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/params/params.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/Interfaz/serializers.py",
+		"/home/franz/Documents/TESIS/FINAL/soc_system_test.dts",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/custom_pwm/custom_pwm.c",
+		"/media/franz/FAEA7985EA793F47/Users/fklue/Documents/Trabajo/Avioingeniería/AIU/GeneradorPrueba/Generator_Label_164/arduino_io.h",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/pinout/pinout.component.html",
+		"/home/franz/Documents/TESIS/LEDs/an706-design-files/an706_de_pin_assignment.tcl",
+		"/home/franz/Documents/TESIS/FINAL/soc_system/synthesis/submodules/hps_sdram_p0_pin_assignments.tcl",
+		"/home/franz/Documents/TESIS/FINAL/soc_system/synthesis/submodules/hps_sdram_p0_parameters.tcl",
+		"/home/franz/Documents/TESIS/FINAL/custom_pwm_hw.tcl",
+		"/home/franz/Documents/TESIS/FINAL/soc_system.sopcinfo",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/custom_pwm/user/test_custom_pwm.c",
+		"/home/franz/Documents/TESIS/LEDs/an706-design-files/ghrd_top.v",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/custom_pwm/Makefile",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/custom_pwm/user/Makefile",
+		"/home/franz/ros-fpga/toolchain.cmake",
+		"/home/franz/ros-fpga/ros_melodic_pi.patch",
+		"/home/franz/Documents/TESIS/Tests/ebbchar/user/Makefile",
+		"/home/franz/Documents/Trabajo/Avioingeniería/Proxmox.txt",
+		"/home/franz/Documents/TESIS/LEDs/an706-design-files/soc_system_timing.sdc",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/fpga.service.ts",
+		"/home/franz/Documents/Robocol/Interfaz/Libraries.txt",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/demo/Makefile",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/demo/ch37x_lib.c",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/demo/demo_cmd.c",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/demo/ch37x_lib.h",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/driver/Makefile",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/driver/ch37x.c",
+		"/home/franz/Documents/TESIS/FINAL/software/userspace/custom_prescaller/Makefile",
+		"/home/franz/Documents/Oscilloscope/CH37X_LINUX/mcu/DEVICE.C",
+		"/home/franz/Documents/TESIS/FINAL/software/kernelspace/custom_leds/Makefile",
+		"/home/franz/inventario/frontend/FrontInventario/src/index.html",
+		"/home/franz/Documents/U/py/Punto1cata.py",
+		"/home/franz/Documents/U/py/Punto 3.py",
+		"/home/franz/Documents/U/py/Punto-1.py",
+		"/home/franz/Documents/U/py/Examen.py",
+		"/home/franz/Documents/U/py/Punto 1 cata.py",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/brazo/brazo.service.ts",
+		"/media/franz/FAEA7985EA793F47/Users/fklue/Documents/2021-01/Colombia/Juego/Juego_Colombia_pde/application.linux64/Juego_Colombia_pde",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/brazo/brazo-cinematica-directa/brazo-cinematica-directa.component.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/brazo/brazo-cinematica-directa/brazo-cinematica-directa.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/params/params.component.css",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/Interfaz/routing.py",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/app.module.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/app.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/fpga.module.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/fpga.component.html",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/fpga.component.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/params/params.component.spec.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/app-routing.module.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/pinout/pinout.component.ts",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/pinout/pinout.component.css",
+		"/home/franz/catkin_ws/src/ros_web_app_2/Robocol/testapp/src/app/rover/fpga/fpga.service.spec.ts",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/app.module.ts",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/planCompra/planCompra-productos/planCompra-productos.component.scss",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/planCompra/planCompra-productos/planCompra-productos.component.html",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/planCompra/planCompra-formulario/planCompra-formulario.component.html",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/planCompra/planCompra-productos/planCompra-productos.component.ts",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/planCompra/planCompra-principal/planCompra-principal.component.html",
+		"/home/franz/inventario/frontend/FrontInventario/src/app/planCompra/planCompra-formulario/planCompra-formulario.component.ts"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 376.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 128.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "package.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 350.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

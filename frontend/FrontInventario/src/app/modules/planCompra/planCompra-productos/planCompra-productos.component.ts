@@ -8,7 +8,7 @@ import { Component, Input, OnInit, ViewChild, ComponentFactoryResolver, OnDestro
 export class PlanCompraProductosComponent implements OnInit //, OnDestroy
 {
 
-	lista:string[]=["1","2","3","4"];
+	lista:string[]=["1","2","3","4","5"];
 
 	// @Input() ads: AdItem[];
 	// public msg = 'Bye Component is here!!!';

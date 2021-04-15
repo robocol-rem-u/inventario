@@ -31,5 +31,6 @@ app.use("/public", express.static(`${__dirname}${path.sep}..${path.sep}storage${
 app.use("/api/productos", require("./routes/products.routes"))
 app.use("/api/pedidos", require("./routes/pedido.routes"))
 app.use("/api/usuario", require("./routes/usuario.routes"))
+app.use("/api/compras", require("./routes/compras.routes"))
 
 module.exports = app
