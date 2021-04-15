@@ -16,9 +16,12 @@ import { PlanCompraPrincipalComponent } from './planCompra/planCompra-principal/
 //menu de opciones
 import { Menu_opcionesModule } from './modules/menu_opciones/menu_opciones.module';
 import { Menu_opcionesComponent } from './modules/menu_opciones/menu_opciones.component';
+//Ingreso de usuario
 import { IngresoUsuarioModule } from './modules/ingreso-usuario/ingreso-usuario.module';
 import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuario.component';
+//Historial
 import { HistorialComponent } from './modules/historial/historial.component';
+import { UsuarioGuard } from './guard/usuario.guard';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -26,12 +29,12 @@ import { HistorialComponent } from './modules/historial/historial.component';
     RegistroProductoModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
-      { path: 'planCompra', component: PlanCompraPrincipalComponent },
-      { path: 'menu', component: Menu_opcionesComponent },
+      { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'planCompra', component: PlanCompraPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
       { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
       { path:'', pathMatch:'full', redirectTo: 'ingreso-usuario'},
-      { path: 'historial', component: HistorialComponent}
+      { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]}
     ]),
     BrowserAnimationsModule,
     FormsModule,
@@ -39,7 +42,7 @@ import { HistorialComponent } from './modules/historial/historial.component';
     Menu_opcionesModule,
     IngresoUsuarioModule
   ],
-  providers: [],
+  providers: [UsuarioGuard],
   bootstrap: [AppComponent],
   schemas: [],
 })

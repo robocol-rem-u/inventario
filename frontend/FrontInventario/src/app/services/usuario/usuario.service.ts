@@ -59,4 +59,8 @@ private getToken(): string {
   }
   return this.token;
 }
+loggedIn(): boolean{
+  // si el token existe -> true
+  return !!localStorage.getItem('ACCESS_TOKEN')
+}
 }
