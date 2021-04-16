@@ -1,10 +1,22 @@
 <nav class="navbar navbar-dark navbar-expand-sm navbar-fixed-top" id="top-bar">
-  <div class="navbar-header">
+  <div class="navbar-header container-fluid">
     <a class="navbar-brand" href="#"
       ><img
         style="height: 48px; padding: 2px 10px"
         src="../assets/images/logo_inventario.png"
     /></a>
+    <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav ml-auto">
+      <ng-container *ngIf="loggedIn()">
+        <li class="nav-item">
+          <a class="nav-link" >todo lo de usurio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()" >Salir</a>
+        </li>
+      </ng-container>
+    </ul>
+    </div>
   </div>
 </nav>
 <router-outlet></router-outlet>

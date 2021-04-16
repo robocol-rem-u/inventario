@@ -4,6 +4,7 @@ import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario/usuario.service';
 import { FormBuilder, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
+import { JwtResponseUser } from 'src/app/models/JwtResponseUser';
 @Component({
   selector: 'app-ingreso-usuario',
   templateUrl: './ingreso-usuario.component.html',
@@ -14,6 +15,7 @@ export class IngresoUsuarioComponent implements OnInit {
   constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private router: Router) {
 
    }
+  infoUsuario: JwtResponseUser
   private user: Usuario={
     usuarioUniandes:"",
     nombre: "",
@@ -31,10 +33,13 @@ export class IngresoUsuarioComponent implements OnInit {
   onLogin(form){
   console.log("xd", form.value)
   this.usuarioService.loginUser(form.value).subscribe(res=>{
-    this.router.navigateByUrl("/menu")
-
-
+    this.router.navigateByUrl("/menu"),
+    this.infoUsuario=res
   })
   }
+  darInfoUsuario(){
+    return this.infoUsuario
+  }
+
 
 }

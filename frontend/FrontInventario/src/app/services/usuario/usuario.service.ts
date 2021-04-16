@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environment';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JwtResponseUser } from 'src/app/models/JwtResponseUser';
 import { tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +16,7 @@ private apiUrl = environment.baseUrl + 'usuario'
 authSubject = new BehaviorSubject(false);
 private token: string;
 
-constructor(private http:HttpClient) { }
+constructor(private http:HttpClient, private router : Router) { }
 headers: HttpHeaders= new HttpHeaders({
   "Content-Type": "application/json"
 })
@@ -45,6 +46,7 @@ logout(): void {
   this.token = '';
   localStorage.removeItem("ACCESS_TOKEN");
   localStorage.removeItem("EXPIRES_IN");
+  this.router.navigate(['/ingreso-usuario'])
 }
 
 private saveToken(token: string, expiresIn: string): void {
