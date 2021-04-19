@@ -13,9 +13,6 @@ import { RegistroProductoPrincipalComponent } from './modules/registro-producto/
 // Plan de compra
 import { PlanCompraModule } from './modules/planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './modules/planCompra/planCompra-principal/planCompra-principal.component';
-//Registro de usuario
-// import { Registro_usuarioModule } from './registro_usuario/registro_usuario.module';
-// import { Registro_usuarioComponent } from './registro_usuario/registro_usuario.component';
 //menu de opciones
 import { Menu_opcionesModule } from './modules/menu_opciones/menu_opciones.module';
 import { Menu_opcionesComponent } from './modules/menu_opciones/menu_opciones.component';
@@ -25,20 +22,33 @@ import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuar
 //Historial
 import { HistorialComponent } from './modules/historial/historial.component';
 import { UsuarioGuard } from './guard/usuario.guard';
+//Catalogo
+import { CatalogoComponent } from './modules/catalogo/catalogo.component';
+import { CatalogoModule } from './modules/catalogo/catalogo.module';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     RegistroProductoModule,
     PlanCompraModule,
+    CatalogoModule,
     HttpClientModule,
-    RouterModule.forRoot([
+    RouterModule.forRoot([ /**/ 
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompra', component: PlanCompraPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
       { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
-      { path:'', pathMatch:'full', redirectTo: 'ingreso-usuario'},
+      { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
       { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]}
+      /*
+      { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
+      { path: 'planCompra', component: PlanCompraPrincipalComponent },
+      { path: 'menu', component: Menu_opcionesComponent },
+      { path: 'catalogo', component: CatalogoComponent },
+      { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
+      { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
+      { path: 'historial', component: HistorialComponent}*/
     ]),
     BrowserAnimationsModule,
     FormsModule,
