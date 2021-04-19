@@ -1,0 +1,31 @@
+<div *ngFor="let item of lista">
+	<div class="list-group text-warning">
+		<a href="/catalogo/producto" class="list-card text-warning">
+			<h5 class="list-title">{{item}}</h5>
+			<div class="row" id="list-row">
+				<div class="col" id ="list-col">
+					<br>
+					<button class="list-button">Registrar Disponibilidad</button>
+					<br>
+					<br>
+					<img class="img" src="../../../assets/images/fotoPieza.png" alt="Imagen"/>
+					<p class="list-text">ESTADO</p>
+					<p class="list-text">Comprado</p>
+				</div>
+				<div class="col" id ="list-col">
+					<p class="list-text">   DESCRIPCIÓN </p>
+					<hr>
+					<div class="list-info">
+						PROVEEDOR:<br>
+						RESPONSABLE:<br>
+						UBICACIÓN:<br>
+						ESTADO:<br>
+						COMENTARIOS ADICIONALES:<br>
+					</div>
+					<br>
+				</div>	
+			</div>
+		</a>
+	</div>
+	<br>
+</div>
