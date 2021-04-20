@@ -1,0 +1,190 @@
+<div class="container-fluider px-lg-5 ">
+	<br>
+	<div class="row mx-lg-n4 align-items-center">
+		<div class="col-lg-1 align-items-center">
+		</div>
+		<div class="col-lg-10 align-items-center">
+			<h1>Nuevo pedido</h1>
+			<!-- <div class="out"> -->
+				<div class="container-fluid">
+					<form #compraForm = "ngForm" (ngSubmit)="addProduct(compraForm)">
+						<div class="row">
+							<div class="col-25">
+								<label for="nombre">Nombre</label>
+							</div>
+							<div class="col-75">
+								<input [(ngModel)]="compra.nombre" type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre del producto" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="proveedor">Proveedor</label>
+							</div>
+							<div class="col-75">
+								<select [(ngModel)]="compra.proveedor" id="proveedor" name="proveedor" required>
+									<option value="vistronica">Vistrónica</option>
+									<option value="nasa">NASA</option>
+									<option value="elmono">El Mono</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="responsable">Responsable</label>
+							</div>
+							<div class="col-75">
+								<input [(ngModel)]="compra.responsable" type="text" id="responsable" name="responsable" placeholder="¿Quén tiene el producto?" autocomplete="name" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="ubicacion">Ubucación</label>
+							</div>
+							<div class="col-75">
+								<input [(ngModel)]="compra.ubicacion" type="text" id="ubicacion" name="ubicacion" placeholder="¿Dónde está el producto?" autocomplete="address-level1" required>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="estado">Estado</label>
+							</div>
+							<div class="col-75">
+								<select [(ngModel)]="compra.estado" id="estado" name="estado" required>
+									<option value="prestado">Prestado</option>
+									<option value="dañado">Dañado</option>
+									<option value="mediodañado">Medio dañado</option>
+									<option value="mediodañado">Funcional</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="subsistema">Subsistema</label>
+							</div>
+							<div class="col-75">
+								<select [(ngModel)]="compra.susbsistemaQueLoNecesita" id="subsistema" name="subsistema" required>
+									<option value="interfaz">Interfaz</option>
+									<option value="traccion">Tracción</option>
+									<option value="sensorica">Sensórica</option>
+									<option value="brazo">Brazo</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="descripcion">Descripción</label>
+							</div>
+							<div class="col-75">
+								<textarea [(ngModel)]="compra.descripcion" id="descripcion" name="descripcion" placeholder="Escribe una breve descripción del producto" style="height:200px" required></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-25">
+								<label for="comentarios">Comentarios</label>
+							</div>
+							<div class="col-75">
+								<input [(ngModel)]="compra.comentariosExtra" type="text" id="comentarios" name="comentarios" placeholder="Comentarios adicionales">
+							</div>
+						</div>
+						<div class="row" style="margin-top: 12px;">
+							<input type="submit" value="Guardar">
+						</div>
+					</form>
+				<!-- </div> -->
+			</div>
+		</div>
+		<div class="col-lg-1 align-items-center">
+		</div>
+	</div>
+</div>
+
+
+<!-- <div class="out">
+  <div class="container">
+     
+</div> -->
+
+
+
+
+
+
+
+
+<!-- <div class="col-75">
+<input [(ngModel)]="producto.nombre" type="text" id="nombre" name="nombre" placeholder="Ingresa el nombre del producto" required>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="proveedor">Proveedor</label>
+</div>
+<div class="col-75">
+<select [(ngModel)]="producto.proveedor" id="proveedor" name="proveedor" required>
+ <option value="vistronica">Vistrónica</option>
+ <option value="nasa">NASA</option>
+ <option value="elmono">El Mono</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="responsable">Responsable</label>
+</div>
+<div class="col-75">
+<input [(ngModel)]="producto.responsable" type="text" id="responsable" name="responsable" placeholder="¿Quén tiene el producto?" autocomplete="name" required>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="ubicacion">Ubucación</label>
+</div>
+<div class="col-75">
+<input [(ngModel)]="producto.ubicacion" type="text" id="ubicacion" name="ubicacion" placeholder="¿Dónde está el producto?" autocomplete="address-level1" required>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="estado">Estado</label>
+</div>
+<div class="col-75">
+<select [(ngModel)]="producto.estado" id="estado" name="estado" required>
+ <option value="prestado">Prestado</option>
+ <option value="dañado">Dañado</option>
+ <option value="mediodañado">Medio dañado</option>
+ <option value="mediodañado">Funcional</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="subsistema">Subsistema</label>
+</div>
+<div class="col-75">
+<select [(ngModel)]="producto.susbsistemaQueLoNecesita" id="subsistema" name="subsistema" required>
+ <option value="interfaz">Interfaz</option>
+ <option value="traccion">Tracción</option>
+ <option value="sensorica">Sensórica</option>
+ <option value="brazo">Brazo</option>
+</select>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="descripcion">Descripción</label>
+</div>
+<div class="col-75">
+<textarea [(ngModel)]="producto.descripcion" id="descripcion" name="descripcion" placeholder="Escribe una breve descripción del producto" style="height:200px" required></textarea>
+</div>
+</div>
+<div class="row">
+<div class="col-25">
+<label for="comentarios">Comentarios</label>
+</div>
+<div class="col-75">
+<input [(ngModel)]="producto.comentariosExtra" type="text" id="comentarios" name="comentarios" placeholder="Comentarios adicionales">
+</div>
+</div>
+<div class="row" style="margin-top: 12px;">
+<input type="submit" value="Guardar">
+</div> -->

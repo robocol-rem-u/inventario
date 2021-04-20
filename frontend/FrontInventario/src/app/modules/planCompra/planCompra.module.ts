@@ -5,10 +5,28 @@ import { FormsModule } from '@angular/forms';
 import { PlanCompraPrincipalComponent } from './planCompra-principal/planCompra-principal.component';
 import { PlanCompraFormularioComponent } from './planCompra-formulario/planCompra-formulario.component';
 import { PlanCompraProductosComponent } from './planCompra-productos/planCompra-productos.component';
+import { PlanCompraOpcionesComponent } from './planCompra-opciones/planCompra-opciones.component';
+import { PlanCompraNuevoComponent } from './planCompra-nuevo/planCompra-nuevo.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [PlanCompraPrincipalComponent, PlanCompraFormularioComponent, PlanCompraProductosComponent],
-  exports: [PlanCompraPrincipalComponent, PlanCompraFormularioComponent, PlanCompraProductosComponent],
-  imports: [CommonModule]
+	declarations: [
+		PlanCompraPrincipalComponent,
+		PlanCompraFormularioComponent,
+		PlanCompraProductosComponent,
+		PlanCompraOpcionesComponent,
+		PlanCompraNuevoComponent
+	],
+	exports: [
+		PlanCompraPrincipalComponent,
+		PlanCompraFormularioComponent,
+		PlanCompraProductosComponent,
+		PlanCompraOpcionesComponent,
+		PlanCompraNuevoComponent
+	],
+	imports: [CommonModule, RouterModule, FormsModule]
 })
-export class PlanCompraModule { }
+export class PlanCompraModule
+{
+
+}

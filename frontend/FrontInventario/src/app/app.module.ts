@@ -13,6 +13,9 @@ import { RegistroProductoPrincipalComponent } from './modules/registro-producto/
 // Plan de compra
 import { PlanCompraModule } from './modules/planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './modules/planCompra/planCompra-principal/planCompra-principal.component';
+import { PlanCompraNuevoComponent } from './modules/planCompra/planCompra-nuevo/planCompra-nuevo.component';
+import { PlanCompraFormularioComponent } from './modules/planCompra/planCompra-formulario/planCompra-formulario.component';
+import { PlanCompraProductosComponent } from './modules/planCompra/planCompra-productos/planCompra-productos.component';
 //menu de opciones
 import { Menu_opcionesModule } from './modules/menu_opciones/menu_opciones.module';
 import { Menu_opcionesComponent } from './modules/menu_opciones/menu_opciones.component';
@@ -37,6 +40,8 @@ import { CatalogoModule } from './modules/catalogo/catalogo.module';
     RouterModule.forRoot([ /**/ 
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompra', component: PlanCompraPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'planCompraNuevo', component: PlanCompraNuevoComponent, canActivate:[UsuarioGuard] },
+      { path: 'planCompraEstado', component: PlanCompraFormularioComponent, canActivate:[UsuarioGuard] },
       { path: 'menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
       { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
       { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},

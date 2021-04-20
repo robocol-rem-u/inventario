@@ -3,16 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-plan-compra-formulario',
   templateUrl: './planCompra-formulario.component.html',
-  styleUrls: ['./planCompra-formulario.component.scss']
+  styleUrls: ['./planCompra-formulario.component.css']
 })
 export class PlanCompraFormularioComponent implements OnInit
 {
-  // $('.selector').html('Dynamic Content Here') // jQuery selector
+  constructor()
+  {
 
-  constructor() { }
+  }
   ngOnInit(): void
   {
-  }
 
-  // textElement.textContent = "What's up?";
+  }
 }
