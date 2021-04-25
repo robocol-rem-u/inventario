@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { HistorialComponent } from './historial.component';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: [HistorialComponent]
+  imports: [CommonModule],
+  declarations: [HistorialComponent],
+  exports: [HistorialComponent],
 })
-export class HistorialModule { }
+export class HistorialModule {}

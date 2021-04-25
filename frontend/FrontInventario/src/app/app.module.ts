@@ -28,6 +28,7 @@ import { UsuarioGuard } from './guard/usuario.guard';
 //Catalogo
 import { CatalogoComponent } from './modules/catalogo/catalogo.component';
 import { CatalogoModule } from './modules/catalogo/catalogo.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [AppComponent],
@@ -37,7 +38,7 @@ import { CatalogoModule } from './modules/catalogo/catalogo.module';
     PlanCompraModule,
     CatalogoModule,
     HttpClientModule,
-    RouterModule.forRoot([ /**/ 
+    RouterModule.forRoot([ /**/
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompra', component: PlanCompraPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompraNuevo', component: PlanCompraNuevoComponent, canActivate:[UsuarioGuard] },
@@ -45,7 +46,8 @@ import { CatalogoModule } from './modules/catalogo/catalogo.module';
       { path: 'menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
       { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
       { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
-      { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]}
+      { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
+      { path: 'catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
       /*
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
       { path: 'planCompra', component: PlanCompraPrincipalComponent },
@@ -59,7 +61,8 @@ import { CatalogoModule } from './modules/catalogo/catalogo.module';
     FormsModule,
     IgxListModule,
     Menu_opcionesModule,
-    IngresoUsuarioModule
+    IngresoUsuarioModule,
+    NgbModule
   ],
   providers: [UsuarioGuard],
   bootstrap: [AppComponent],

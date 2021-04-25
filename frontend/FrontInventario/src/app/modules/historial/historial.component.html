@@ -1,34 +1,26 @@
-<div id='fondo'>
+<div id="fondo">
   <h4>Historial de movimientos</h4>
-  <table class="table">
+  <table class="table ">
     <thead class="thead-dark">
       <tr>
         <th scope="col">Cantidad</th>
         <th scope="col">Tipo de movimiento</th>
         <th scope="col">Responsable</th>
         <th scope="col">Fecha</th>
+        <th scope='col'>Hora</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
+      <tr *ngFor="let h of historial">
+        <th scope="row">{{h.cantidad}}</th>
+        <td>{{h.tipoMovimiento}}</td>
+        <td>{{h.responsable}}</td>
+        <td>{{h.createdAt| date:'dd-MM-YYYY'}}</td>
+        <td>{{h.createdAt| date:'HH:mm'}}</td>
       </tr>
     </tbody>
   </table>
-
 </div>
+<!-- <app-historial [idProducto]="idProducto"></app-historial> -->
+<!-- para llamarlo de una desde catálogo -->
+<!-- idProducto:string ="607e05c280e6474bac3cce7a" -->

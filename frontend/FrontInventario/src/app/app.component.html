@@ -9,7 +9,7 @@
     <ul class="navbar-nav ml-auto">
       <ng-container *ngIf="loggedIn()">
         <li class="nav-item">
-          <a class="nav-link" >todo lo de usurio</a>
+          <a class="nav-link" >{{usuario}}</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" (click)="logout()" >Salir</a>
@@ -19,4 +19,7 @@
     </div>
   </div>
 </nav>
+<!-- <ng-container *ngIf="loggedIn()">
+  <app-ingreso-usuario (usuario)="actualizar()"></app-ingreso-usuario>
+</ng-container> -->
 <router-outlet></router-outlet>
