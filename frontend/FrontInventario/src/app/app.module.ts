@@ -10,6 +10,9 @@ import { IgxListModule } from 'igniteui-angular';
 // Registro de Producto
 import { RegistroProductoModule } from './modules/registro-producto/registro-producto.module';
 import { RegistroProductoPrincipalComponent } from './modules/registro-producto/registro-producto-principal/registro-producto-principal.component';
+// Mensajes
+import { MensajesModule } from './modules/mensajes/mensajes.module';
+import { MensajesPrincipalComponent } from './modules/mensajes/mensajes-principal/mensajes-principal.component';
 // Plan de compra
 import { PlanCompraModule } from './modules/planCompra/planCompra.module';
 import { PlanCompraPrincipalComponent } from './modules/planCompra/planCompra-principal/planCompra-principal.component';
@@ -40,6 +43,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     RouterModule.forRoot([ /**/
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'mensajes', component: MensajesPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompra', component: PlanCompraPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompraNuevo', component: PlanCompraNuevoComponent, canActivate:[UsuarioGuard] },
       { path: 'planCompraEstado', component: PlanCompraFormularioComponent, canActivate:[UsuarioGuard] },

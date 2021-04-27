@@ -20,7 +20,6 @@ export class AppComponent {
   }
   actualizar(){
  // this.usuario=usuario
- console.log("actualiza esa mondá")
   // this.usuario=usuario
   // console.log("llego aca " +   usuario)
   }
