@@ -1,30 +1,28 @@
 export class Producto {
-    //greeting: string;
 
     nombre: string;
-    //id: string;
     descripcion: string;
     proveedor: string;
-    responsable: string;
-    ubicacion: string;
-    estado: string;
-    susbsistemaQueLoNecesita: string;
-    comentariosExtra: string;
-    disponibleParaUso: number;
-    disponibleParaArreglo: number;
-    foto: string;
+    ubicacionEnCubiculo: string;
+    familia: string;
+    cantidadDisponiblesParaUso: Number;
+    cantidadDisponiblesParaArreglo: Number;
+    cantidadEnUso: Number;
+    cantidadEnArreglo: Number;
+    cantidadTotal: Number;
+    image: File;
   
-    constructor(nombre: string, descripcion: string, proveedor: string, responsable: string, ubicacion: string, estado: string, susbsistemaQueLoNecesita: string, comentariosExtra: string, disponibleParaUso: number, disponibleParaArreglo: number, foto: string) {
+    constructor(nombre: string, descripcion: string, proveedor: string, ubicacionEnCubiculo: string, familia: string, cantidadTotal: Number, cantidadDisponiblesParaUso: Number, cantidadDisponiblesParaArreglo: Number, cantidadEnUso: Number, cantidadEnArreglo: Number, image: File) {
       this.nombre = nombre;
       this.descripcion = descripcion;
       this.proveedor = proveedor;
-      this.responsable = responsable;
-      this.ubicacion = ubicacion;
-      this.estado = estado;
-      this.susbsistemaQueLoNecesita = susbsistemaQueLoNecesita;
-      this.comentariosExtra = comentariosExtra;
-      this.disponibleParaUso = disponibleParaUso;
-      this.disponibleParaArreglo = disponibleParaArreglo;
-      this.foto = foto;
+      this.ubicacionEnCubiculo = ubicacionEnCubiculo;
+      this.familia = familia;
+      this.cantidadDisponiblesParaArreglo = cantidadDisponiblesParaArreglo;
+      this.cantidadDisponiblesParaUso = cantidadDisponiblesParaUso;
+      this.cantidadEnArreglo = cantidadEnArreglo;
+      this.cantidadEnUso = cantidadEnUso;
+      this.cantidadTotal = cantidadTotal;
+      this.image = image;
     }
   }

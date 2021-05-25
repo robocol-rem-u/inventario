@@ -1,5 +1,21 @@
 /* Style inputs, select elements and textareas */
-input[type=text], select, textarea{
+.atras {
+  height: 35px;
+  padding-left: 3%;
+  padding-top: 5px;
+}
+
+.regresar{
+  height: 100%;
+  border-radius: 0; 
+  margin: auto;
+}
+
+.foto {
+  width: 100%;
+}
+
+input[type=text], input[type=number], select, textarea{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;

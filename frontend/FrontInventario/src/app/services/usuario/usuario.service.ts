@@ -22,7 +22,11 @@ headers: HttpHeaders= new HttpHeaders({
 })
 usuarios: Usuario[]
 
-
+getUsuarioPorUsuarioUniandes(usuarioUniandes:string): Observable<Usuario>{
+  const usuario= this.http.get<Usuario>(this.apiUrl+"/"+usuarioUniandes)
+  console.log("esto del servicio"+ usuario+"si desgloso")
+  return usuario
+}
 getUsuarios(): Observable<Usuario[]>{
   return this.http.get<Usuario[]> (this.apiUrl)
 }
@@ -36,7 +40,7 @@ loginUser(usuario: Usuario):Observable <JwtResponseUser>{
     tap((res: JwtResponseUser)=> {
       if (res){
         //guardar token
-        this.saveToken(res.dataUser.accessToken, res.dataUser.expiresIn)
+        this.saveToken(res.accessToken, res.expiresIn)
       }
     })
   );

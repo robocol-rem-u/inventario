@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ProductoService} from '../../../services/producto/producto.service'
-import {NgForm} from '@angular/forms'
-import {Producto} from '../../../models/producto'
+import { Router } from '@angular/router';
 
+interface HtmlInputEvent extends Event{
+  target : HTMLInputElement & EventTarget;
+}
 
 @Component({
   selector: 'app-registro-producto-principal',
@@ -11,21 +13,32 @@ import {Producto} from '../../../models/producto'
 })
 export class RegistroProductoPrincipalComponent implements OnInit {
 
-  producto: Producto = new Producto("", "", "", "", "", "", "", "", 0, 0, "");
+  file: File;
+  photoSelected: string | ArrayBuffer;
 
-  constructor(private productoService : ProductoService) { }
+  constructor(private productoService : ProductoService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  addProduct(form : NgForm){
-    this.productoService.createProduct(form.value).subscribe(
-      res => {
-        console.log(res),
-        form.reset
-      },
-      err => console.error(err)
-    );
+  btnClick = function () {
+    this.router.navigateByUrl('/menu');
+  };
+
+  addProductByHtml(nombre: HTMLInputElement, proveedor: HTMLSelectElement, familia: HTMLSelectElement, ubicacionEnCubiculo: HTMLSelectElement, descripcion: HTMLTextAreaElement, cantidadTotal: HTMLInputElement){
+    this.productoService.createProductByHtml(nombre.value, proveedor.value, familia.value, ubicacionEnCubiculo.value, descripcion.value, cantidadTotal.value, this.file).subscribe(
+      res => console.log(res), err => console.log(err)
+    )
+  }
+
+  onPhotoSelected(event: HtmlInputEvent): void {
+    if (event.target.files && event.target.files[0]){
+      this.file = <File> event.target.files[0];
+      //image preview
+      const reader = new FileReader();
+      reader.onload = e => this.photoSelected = reader.result;
+      reader.readAsDataURL(this.file);
+    } 
   }
   
 }

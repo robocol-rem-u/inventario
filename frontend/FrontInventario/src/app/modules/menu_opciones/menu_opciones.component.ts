@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-menu_opciones',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu_opciones.component.css'],
 })
 export class Menu_opcionesComponent implements OnInit {
+  @Input() usuario: Usuario
   constructor() {}
-
   ngOnInit() {}
 }
