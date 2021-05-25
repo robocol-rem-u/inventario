@@ -11,7 +11,6 @@ export class AppComponent {
   title = 'FrontInventario';
   constructor(private usuarioService: UsuarioService){}
   usuario : string
-  //usuario : JwtResponseUser
   loggedIn():boolean{
     return this.usuarioService.loggedIn();
   }
@@ -19,9 +18,7 @@ export class AppComponent {
     this.usuarioService.logout();
   }
   actualizar(){
- // this.usuario=usuario
-  // this.usuario=usuario
-  // console.log("llego aca " +   usuario)
+
   }
 
 }
