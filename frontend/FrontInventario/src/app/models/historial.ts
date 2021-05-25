@@ -2,7 +2,6 @@ export class Historial {
   cantidad: number;
   tipoMovimiento: String;
   responsable: String;
-  // fecha: Date;
   idProducto: number;
   createdAt: Date
 

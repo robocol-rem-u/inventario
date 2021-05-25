@@ -11,6 +11,14 @@ const morgan = require("morgan")
 const app = express()
 const cors = require("cors")
 
+// Serve static files
+app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario'));
+
+// Send all requests to index.html
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario/index.html'));
+});
+
 //ATRIBUTOS
 //Le damos el valor del puerto como una variable
 //Si puede usar el puerto de la variable de entorno lo usa, si no, usa el 4000
@@ -29,7 +37,6 @@ app.use("/public", express.static(`${__dirname}${path.sep}..${path.sep}storage${
 app.use("/api/productos", require("./routes/products.routes"))
 app.use("/api/pedidos", require("./routes/pedido.routes"))
 app.use("/api/usuario", require("./routes/usuario.routes"))
-app.use("/api/compras", require("./routes/compras.routes"))
 app.use("/api/mensajes", require("./routes/mensajes.routes"))
 
 module.exports = app
