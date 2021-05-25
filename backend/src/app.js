@@ -22,7 +22,7 @@ app.get('/*', function(req, res) {
 //ATRIBUTOS
 //Le damos el valor del puerto como una variable
 //Si puede usar el puerto de la variable de entorno lo usa, si no, usa el 4000
-app.set("port", process.env.APP_PORT || 4000)
+app.set("port", process.env.PORT || 5000)
 
 //MIDDLEWARES
 app.use(cors());
