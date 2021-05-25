@@ -18,6 +18,7 @@ app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/Front
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario/index.html'));
 });
+app.use(express.static('build'));
 
 //ATRIBUTOS
 //Le damos el valor del puerto como una variable
@@ -31,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 //Con esta línea le estamos diciendo a express que en la ubicación /public sirva los archivos estáticos que están en /storage/images
 //Pero fuera de la api nunca se va a saber que /storage/images es la verdadera ubicación
-app.use("/public", express.static(`${__dirname}${path.sep}..${path.sep}storage${path.sep}images`));
+// app.use("/public", express.static(`${__dirname}${path.sep}..${path.sep}storage${path.sep}images`));
 
 //RUTAS
 app.use("/api/productos", require("./routes/products.routes"))
