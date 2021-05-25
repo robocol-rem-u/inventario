@@ -25,13 +25,14 @@ const productoSchema = new Schema(
 );
 
 //Mongoose nos permite crear métodos a nuestros esquemas:
-productoSchema.methods.setImgUrl = function setImgUrl (fileName){
+productoSchema.methods.setImgUrl = function setImgUrl (imagePath){
     //Debería ser así, pero por alguna razón no funciona
     /*
     const { host, port } = appConfig
     this.fotoPath = `${host}:${port}/public/${fileName}`
     */
-    this.fotoPath = `http://localhost:4000/public/${fileName}`
+    //this.fotoPath = `http://localhost:4000/public/${fileName}`
+    this.fotoPath = imagePath;
 }
 
 module.exports = model("Producto", productoSchema);
