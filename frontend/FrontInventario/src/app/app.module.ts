@@ -38,6 +38,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     RegistroProductoModule,
+    MensajesModule,
     PlanCompraModule,
     CatalogoModule,
     HttpClientModule,

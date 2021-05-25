@@ -4,6 +4,7 @@ const Producto = require("../models/Producto")
 
 productosCtrl.getProductos = async (req, res) => {
     const productos = await Producto.find()
+    console.log(productos);
     res.json(productos)
 }
 //productosCtrl.getProductoNombre = (req, res) => {
