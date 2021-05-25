@@ -114,8 +114,8 @@
       // The list of file replacements can be found in `angular.json`.
 
 
-      var host = 'localhost';
-      var port = '4000';
+      var host = 'vast-springs-05022.herokuapp.com';
+      var port = '8587';
       var rootApi = 'api';
       var environment = {
         production: false,
