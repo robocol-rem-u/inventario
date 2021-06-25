@@ -1,10 +1,8 @@
 const usuarioCtrl = {}
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
- const Usuario = require("../models/Usuario")
- 
- const SECRET_KEY= 'sercret';
-
+const Usuario = require("../models/Usuario")
+const SECRET_KEY= 'sercret';
 
 usuarioCtrl.getUsuarios = async (req, res) => {
     const usuarios = await Usuario.find()
@@ -37,7 +35,6 @@ usuarioCtrl.createUsuario = async (req, res) => {
         accessToken:accessToken, 
         expiresIn:expiresIn
     }
-
     res.send({dataUser})
 }
 usuarioCtrl.loginUser = async (req, res) =>{

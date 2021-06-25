@@ -1,19 +1,19 @@
 const multer = require("multer")
-const AWS = require("aws-sdk")
+// const AWS = require("aws-sdk")
 
-const s3 = new AWS.S3({
-    credentials: {
-        accessKeyId: process.env.AWS_ID,
-        secretAccessKey: process.env.AWS_SECRET,
-    },
-});
+// const s3 = new AWS.S3({
+//     credentials: {
+//         accessKeyId: process.env.AWS_ID,
+//         secretAccessKey: process.env.AWS_SECRET,
+//     },
+// });
 
-const upload = multer().single("image")
+// const upload = multer().single("image")
 
-module.exports = {
-    upload: upload,
-    s3: s3
-}
+// module.exports = {
+//     upload: upload,
+//     s3: s3
+// }
 
 /*
 const storage = multer.diskStorage({
