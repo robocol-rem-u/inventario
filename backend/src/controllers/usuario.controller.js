@@ -10,13 +10,15 @@ usuarioCtrl.getUsuarios = async (req, res) => {
 }
 
 usuarioCtrl.createUsuario = async (req, res) => {
-    let lista={
+  console.log("esta aca 1")
+  let lista={
         usuarioUniandes: req.body.usuarioUniandes, 
         nombre: req.body.nombre, 
         contrasenia: bcrypt.hashSync( req.body.contrasenia), //para codificarla contraseña
         admin: req.body.admin, 
         lider: req.body.lider 
     }
+    console.log("esta aca "+ lista)
     const newUsuario = new Usuario(lista)
     console.log(newUsuario)
     await newUsuario.save()
@@ -36,7 +38,7 @@ usuarioCtrl.createUsuario = async (req, res) => {
     res.send({dataUser})
 }
 usuarioCtrl.loginUser = async (req, res) =>{
-    console.log("llego")
+
     const userData = {
         usuarioUniandes: req.body.usuarioUniandes,
         contrasenia: req.body.contrasenia
@@ -48,8 +50,8 @@ usuarioCtrl.loginUser = async (req, res) =>{
         // usuarioUnaindes does not exist
         res.status(409).send({ message: 'no se ha encontrado su usuario Uniandes' });
       } else {
-        const resultPassword = bcrypt.compareSync(userData.contrasenia, user.contrasenia);
-        if (resultPassword) {
+        const resultPassword = bcrypt.compareSync(userData.contrasenia,user.contrasenia );
+         if (resultPassword) {
           const expiresIn = 24 * 60 * 60;
           const accessToken = jwt.sign({ id: user.id }, SECRET_KEY, { expiresIn: expiresIn });
   
