@@ -17,7 +17,6 @@ const router = Router()
 // api/mensajes
 router.get("/", mensajesCtrl.getMensajes)
 //Con upload.single("image") estamos diciendo que antes de crear el producto en la base de datos, guarde la imagen que viene con el nombre image en el servidor
-// router.post("/", upload.single("image"), mensajesCtrl.createMensaje)
 
 // api/mensajes/:id
 router.put("/:id", mensajesCtrl.updateMensaje)
