@@ -50,7 +50,7 @@
       var rootApi = 'api';
       var environment = {
         production: false,
-        baseUrl: "http://".concat(host, ":").concat(port, "/").concat(rootApi, "/")
+        baseUrl: "https://".concat(host, ":").concat(port, "/").concat(rootApi, "/")
       };
       /*
        * For easier debugging in development mode, you can import the following file

@@ -7,7 +7,7 @@ const rootApi = 'api';
 
 export const environment = {
   production: false,
-baseUrl:`http://${host}:${port}/${rootApi}/`
+baseUrl:`https://${host}:${port}/${rootApi}/`
 };
 
 
