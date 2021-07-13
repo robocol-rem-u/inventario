@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
+import { ToastrModule } from 'ngx-toastr';
 // Igx
 import { IgxListModule } from 'igniteui-angular';
 // Registro de Producto
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    ToastrModule.forRoot(), 
     BrowserModule,
     RegistroProductoModule,
     HttpClientModule,
@@ -33,6 +35,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
       { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
       { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
+      //{ path: 'catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
     ]),
     BrowserAnimationsModule,
     FormsModule,

@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ProductoService {
 
-  URL_API = 'http://localhost:4000/api/productos'
+  URL_API = 'http://localhost:5000/api/productos'
 
   constructor(private httpClient : HttpClient) { }
 
