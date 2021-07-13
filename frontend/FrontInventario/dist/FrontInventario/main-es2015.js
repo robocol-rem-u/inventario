@@ -30,7 +30,8 @@ const port = '8587';
 const rootApi = 'api';
 const environment = {
     production: false,
-    baseUrl: `https://${host}:${port}/${rootApi}/`
+    // baseUrl:`https://${host}:${port}/${rootApi}/`
+    baseUrl: `https://${host}/${rootApi}/`
 };
 /*
  * For easier debugging in development mode, you can import the following file
