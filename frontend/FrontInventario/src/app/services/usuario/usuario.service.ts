@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class UsuarioService {
 
 private apiUrl = environment.baseUrl + 'usuario'
-//URL_API= "http://localhost:4000/api/usuario"
 authSubject = new BehaviorSubject(false);
 private token: string;
 

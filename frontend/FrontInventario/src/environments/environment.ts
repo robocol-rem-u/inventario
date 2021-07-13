@@ -1,13 +1,13 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
-const host = 'vast-springs-05022.herokuapp.com';
-const port = '8587';
+const host = 'localhost';
+const port = '5000';
 const rootApi = 'api';
 
 export const environment = {
   production: false,
-baseUrl:`https://${host}:${port}/${rootApi}/`
+  baseUrl:`http://${host}:${port}/${rootApi}/`
 };
 
 
