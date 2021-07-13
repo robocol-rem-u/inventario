@@ -1,11 +1,8 @@
 <div id="fondo">
   <div class="container">
     <form   [formGroup]="userForm" (ngSubmit)= "onLogin(userForm)">
-      <div class="row">
-        <img
-          style="height: 48px; padding: 2px 10px"
-          src="../assets/images/logo_inventario.png"
-        />
+      <div class="row" *ngIf="ingreso==false">
+        <h3> Contraseña incorrecta</h3>
       </div>
 
       <div class="row">

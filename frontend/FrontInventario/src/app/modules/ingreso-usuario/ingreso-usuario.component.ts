@@ -5,8 +5,7 @@ import { UsuarioService } from 'src/app/services/usuario/usuario.service';
 import { FormBuilder, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 import { JwtResponseUser } from 'src/app/models/JwtResponseUser';
-import { EventEmitter } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+
 @Component({
   selector: 'app-ingreso-usuario',
   templateUrl: './ingreso-usuario.component.html',
@@ -14,9 +13,9 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class IngresoUsuarioComponent implements OnInit {
 
-  @Output()  usuario : EventEmitter<string> = new EventEmitter<string>();
-  constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private router: Router,
+   constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private router: Router
    ) {}
+   ingreso:boolean= true
   infoUsuario: JwtResponseUser
   usuarioFinal: Usuario
   userForm : FormGroup;
@@ -28,23 +27,13 @@ export class IngresoUsuarioComponent implements OnInit {
     })
   }
   onLogin(form){
-  console.log("xd", form.value.usuarioUniandes)
-  this.usuarioService.loginUser(form.value).subscribe(res=>{
-    console.log("este es el res"+res.nombre)
-    this.infoUsuario=res
-    console.warn(this.infoUsuario +"funciona?"+this.infoUsuario.nombre+this.infoUsuario.lider)
-    this.usuario.emit(res.nombre)
 
-    this.usuarioService.getUsuarioPorUsuarioUniandes(form.value.usuarioUniandes)
-    .subscribe(usuario =>{
-      this.usuarioFinal=new Usuario(usuario.usuarioUniandes, usuario.nombre, usuario.apellido, usuario.admin, usuario.lider)
-      console.warn("ng init1 "+this.usuarioFinal)
-      this.router.navigateByUrl("/menu")
-    }
-     )
-  })
-
-    // this.usuario.emit(this.infoUsuario.nombre)
+    this.usuarioService.loginUser(form.value).subscribe(res=>{
+      console.log("xd", form.value)
+      this.router.navigateByUrl("/menu"),
+      this.infoUsuario=res
+    })
+    this.ingreso= false;
   }
   darInfoUsuario(){
     return this.infoUsuario
