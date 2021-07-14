@@ -33,7 +33,7 @@ import { CatalogoComponent } from './modules/catalogo/catalogo.component';
     RegistroProductoModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: '/robocol/registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: '/robocol/menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
       { path: '/robocol/ingreso-usuario', component: IngresoUsuarioComponent},
       { path: '/robocol', pathMatch:'full', redirectTo: 'ingreso-usuario'},

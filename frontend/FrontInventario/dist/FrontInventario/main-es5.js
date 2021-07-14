@@ -935,7 +935,7 @@
         },
         providers: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]],
         imports: [[ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot(), _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _modules_registro_producto_registro_producto_module__WEBPACK_IMPORTED_MODULE_8__["RegistroProductoModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([{
-          path: '/robocol/registroProducto',
+          path: 'robocol/registroProducto',
           component: _modules_registro_producto_registro_producto_principal_registro_producto_principal_component__WEBPACK_IMPORTED_MODULE_9__["RegistroProductoPrincipalComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {

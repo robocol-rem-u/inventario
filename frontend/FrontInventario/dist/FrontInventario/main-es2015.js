@@ -441,7 +441,7 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_19__["ɵɵdefineInjecto
             _modules_registro_producto_registro_producto_module__WEBPACK_IMPORTED_MODULE_8__["RegistroProductoModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"],
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([
-                { path: '/robocol/registroProducto', component: _modules_registro_producto_registro_producto_principal_registro_producto_principal_component__WEBPACK_IMPORTED_MODULE_9__["RegistroProductoPrincipalComponent"], canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]] },
+                { path: 'robocol/registroProducto', component: _modules_registro_producto_registro_producto_principal_registro_producto_principal_component__WEBPACK_IMPORTED_MODULE_9__["RegistroProductoPrincipalComponent"], canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]] },
                 { path: '/robocol/menu', component: _modules_menu_opciones_menu_opciones_component__WEBPACK_IMPORTED_MODULE_11__["Menu_opcionesComponent"], canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]] },
                 { path: '/robocol/ingreso-usuario', component: _modules_ingreso_usuario_ingreso_usuario_component__WEBPACK_IMPORTED_MODULE_13__["IngresoUsuarioComponent"] },
                 { path: '/robocol', pathMatch: 'full', redirectTo: 'ingreso-usuario' },
