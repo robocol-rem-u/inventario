@@ -939,22 +939,22 @@
           component: _modules_registro_producto_registro_producto_principal_registro_producto_principal_component__WEBPACK_IMPORTED_MODULE_9__["RegistroProductoPrincipalComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {
-          path: '/robocol/menu',
+          path: 'robocol/menu',
           component: _modules_menu_opciones_menu_opciones_component__WEBPACK_IMPORTED_MODULE_11__["Menu_opcionesComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {
-          path: '/robocol/ingreso-usuario',
+          path: 'robocol/ingreso-usuario',
           component: _modules_ingreso_usuario_ingreso_usuario_component__WEBPACK_IMPORTED_MODULE_13__["IngresoUsuarioComponent"]
         }, {
-          path: '/robocol',
+          path: 'robocol',
           pathMatch: 'full',
           redirectTo: 'ingreso-usuario'
         }, {
-          path: '/robocol/historial',
+          path: 'robocol/historial',
           component: _modules_historial_historial_component__WEBPACK_IMPORTED_MODULE_14__["HistorialComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {
-          path: '/robocol/catalogo',
+          path: 'robocol/catalogo',
           component: _modules_catalogo_catalogo_component__WEBPACK_IMPORTED_MODULE_18__["CatalogoComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }]), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"], igniteui_angular__WEBPACK_IMPORTED_MODULE_7__["IgxListModule"], _modules_menu_opciones_menu_opciones_module__WEBPACK_IMPORTED_MODULE_10__["Menu_opcionesModule"], _modules_ingreso_usuario_ingreso_usuario_module__WEBPACK_IMPORTED_MODULE_12__["IngresoUsuarioModule"], _modules_catalogo_catalogo_module__WEBPACK_IMPORTED_MODULE_17__["CatalogoModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"]]]
