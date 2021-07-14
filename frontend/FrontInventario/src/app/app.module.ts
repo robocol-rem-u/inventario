@@ -32,6 +32,8 @@ import { UsuarioGuard } from './guard/usuario.guard';
 import { CatalogoComponent } from './modules/catalogo/catalogo.component';
 import { CatalogoModule } from './modules/catalogo/catalogo.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Usuario } from './models/usuario';
+import { CatalogoRegistroActividadComponent } from './modules/catalogo/catalogo-registroActividad/catalogo-registroActividad.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -53,6 +55,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
       { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
       { path: 'catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
+      { path: 'registro-actividad', component: CatalogoRegistroActividadComponent}
       /*
       { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
       { path: 'planCompra', component: PlanCompraPrincipalComponent },

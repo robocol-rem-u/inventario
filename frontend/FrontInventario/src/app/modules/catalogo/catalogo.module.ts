@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CatalogoComponent } from './catalogo.component';
 import { CatalogoProductoComponent } from './catalogo-producto/catalogo-producto/catalogo-producto.component';
 import { HistorialModule } from '../historial/historial.module';
+import { CatalogoRegistroActividadComponent } from './catalogo-registroActividad/catalogo-registroActividad.component';
 
 @NgModule({
   imports: [
@@ -10,9 +11,12 @@ import { HistorialModule } from '../historial/historial.module';
   ],
   declarations: [
     CatalogoComponent,
-    CatalogoProductoComponent],
+    CatalogoProductoComponent,
+    CatalogoRegistroActividadComponent
+  ],
   exports:[
     CatalogoComponent,
-    CatalogoProductoComponent ]
+    CatalogoProductoComponent,
+    CatalogoRegistroActividadComponent ]
 })
 export class CatalogoModule { }
