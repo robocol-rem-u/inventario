@@ -1,11 +1,10 @@
 const {Schema, model} = require("mongoose")
 
-const historialSchema = new Schema(
+const prestamoSchema = new Schema(
     {
         cantidad: {type: Number, required: true, trim:true},
-        tipoMovimiento: {type: String, required: true, trim:true},
         responsable: {type: String, required: true, trim: true}, 
-        fecha: {type: Date, required: true},
+        fecha: {type: Date, required: true}, 
         id_producto:{type:String, required: true, trim: true}
     },
     {
@@ -14,4 +13,4 @@ const historialSchema = new Schema(
     }
 );
 
-module.exports = model("Historial", historialSchema);
+module.exports = model("Prestamo", prestamoSchema);

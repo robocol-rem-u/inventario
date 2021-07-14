@@ -27,5 +27,14 @@ historialCtrl.updateHistorial = async (req, res) => {
     await Historial.findByIdAndUpdate(req.params.id, req.body)
     res.send("Update Historial")
 }
+/**
+ * Devuelve todos los movimientos de un producto en específico
+ * @param {*} req 
+ * @param {*} res 
+ */
+ historialCtrl.getHistorialSegunProducto = async (req, res) => {
+    const historialProducto = await EnUso.find( {"id_producto" : req.body.id_producto})
+    res.json(historialProducto)
+}
 
 module.exports = historialCtrl
