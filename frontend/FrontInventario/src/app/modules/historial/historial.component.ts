@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { HistorialService } from 'src/app/services/historial/historial.service';
 import { ProductoService } from 'src/app/services/producto/producto.service';
 import { Historial } from "../../models/historial"
 @Component({
@@ -10,10 +11,10 @@ export class HistorialComponent implements OnInit {
 
   @Input() idProducto : string
   historial: Historial[]
-  constructor(private productoService: ProductoService) { }
+  constructor(private historialService: HistorialService) { }
 
   getHistorial():void{
-    this.productoService.getHistorialProduct(this.idProducto)
+    this.historialService.getHistorialProduct(this.idProducto)
     .subscribe(historial => this.historial=historial)
   }
   ngOnInit() {
