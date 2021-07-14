@@ -1,42 +1,44 @@
+const prestamoCtrl = {}
+
 const Prestamo = require("../models/Prestamo")
 /**
  * Devuelve todos los elementos que estan en uso de todos los productos 
  * @param {*} req 
  * @param {*} res 
  */
-prestamoCtrl.getElementosEnUso = async (req, res) => {
-    const elementosEnUso = await EnUso.find()
-    res.json(elementosEnUso)
+prestamoCtrl.getPrestamos = async (req, res) => {
+    const elementosPrestamo = await Prestamo.find()
+    res.json(elementosPrestamo)
 }
 /**
  * Devuelve todos los elementos que estan en uso de un producto en específico
  * @param {*} req 
  * @param {*} res 
  */
- prestamoCtrl.getElementosEnUsoSegunProducto = async (req, res) => {
-    const elementosEnUso = await EnUso.find( {"id_producto" : req.body.id_producto})
-    res.json(elementosEnUso)
+ prestamoCtrl.getPrestamosProducto = async (req, res) => {
+    const elementosPrestamo = await Prestamo.find( {"id_producto" : req.body.id_producto})
+    res.json(elementosPrestamo)
 }
-prestamoCtrl.createEnUso = async (req, res) => {
-    const newEnUso = new EnUso(req.body)
-    console.log(newEnUso)
-    await newEnUso.save()
-    res.send("Create EnUso")
+prestamoCtrl.createPrestamo = async (req, res) => {
+    const newPrestamo = new Prestamo(req.body)
+    console.log(newPrestamo)
+    await newPrestamo.save()
+    res.send("Create Prestamo")
 }
-prestamoCtrl.getEnUso = async (req, res) => {
+prestamoCtrl.getPrestamo = async (req, res) => {
     console.log(req.params)
-    const prestamo = await EnUso.findById(req.params.id)
+    const prestamo = await Prestamo.findById(req.params.id)
     res.json(prestamo)
 }
-prestamoCtrl.deleteEnUso = async (req, res) => {
+prestamoCtrl.deletePrestamo = async (req, res) => {
     console.log(req.params)
-    await EnUso.findByIdAndDelete(req.params.id)
-    res.send("Delete EnUso")
+    await Prestamo.findByIdAndDelete(req.params.id)
+    res.send("Delete Prestamo")
 }
-prestamoCtrl.updateEnUso = async (req, res) => {
+prestamoCtrl.updatePrestamo = async (req, res) => {
     console.log(req.params)
-    await EnUso.findByIdAndUpdate(req.params.id, req.body)
-    res.send("Update EnUso")
+    await Prestamo.findByIdAndUpdate(req.params.id, req.body)
+    res.send("Update Prestamo")
 }
 
 module.exports = prestamoCtrl
