@@ -3,18 +3,19 @@ import {HttpClient} from '@angular/common/http'
 import {Producto} from '../../models/producto';
 import { Historial } from "../../models/historial";
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductoService {
 
-  URL_API = 'http://localhost:4000/api/productos'
+  private URL_API = environment.baseUrl + 'productos';
 
   constructor(private httpClient : HttpClient) { }
 
-  getProducts(){
-    return this.httpClient.get<Producto>(this.URL_API);
+  getProducts():Observable<Producto[]>{
+    return this.httpClient.get<Producto[]>(this.URL_API);
   }
   getHistorialProduct(idProducto: string):Observable<Historial[]>{
     console.warn(this.URL_API+"/"+idProducto+"/historial")

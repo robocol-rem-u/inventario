@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
+import { ToastrModule } from 'ngx-toastr';
 // Igx
 import { IgxListModule } from 'igniteui-angular';
 // Registro de Producto
@@ -20,10 +21,14 @@ import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuar
 import { HistorialComponent } from './modules/historial/historial.component';
 import { UsuarioGuard } from './guard/usuario.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//Catalogo
+import { CatalogoModule } from './modules/catalogo/catalogo.module';
+import { CatalogoComponent } from './modules/catalogo/catalogo.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    ToastrModule.forRoot(),
     BrowserModule,
     RegistroProductoModule,
     HttpClientModule,
@@ -33,12 +38,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
       { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
       { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
       { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
+      { path: 'catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
     ]),
     BrowserAnimationsModule,
     FormsModule,
     IgxListModule,
     Menu_opcionesModule,
     IngresoUsuarioModule,
+    CatalogoModule,
     NgbModule
   ],
   providers: [UsuarioGuard],

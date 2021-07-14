@@ -1,0 +1,23 @@
+<div class="atras" >
+  <img (click)="navigate('menu');" class="regresar" routerLink='/menu' style="height: 100%;
+     border-radius: 0; margin: auto;" src="../../../assets/images/regresar.png" />
+</div>
+<div class="container">
+  <h3 id="title"> CATÁLOGO </h3>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+     <div class="col mb-4" *ngFor="let producto of productos">
+        <div class="card text-center">
+           <img src={{producto.fotoPath}} class="card-img-top" alt="...">
+           <div class="card-body">
+              <h5 class="card-title">{{producto.nombre}}</h5>
+              <p class="card-text"><strong>Proveedor:</strong> {{producto.proveedor}}</p>
+              <p class="card-text"><strong>Familia:</strong> {{producto.familia}}</p>
+              <p class="card-text"><strong>Ubicación:</strong> {{producto.ubicacionEnCubiculo}}</p>
+              <p class="card-text"><strong>Descripción:</strong> {{producto.descripcion}}</p>
+              <p class="card-text"><strong>Cantidad:</strong> {{producto.cantidadTotal}}</p>
+              <a (click)="irADisponibilidad(producto);" class="btn btn-primary">Disponibilidad</a>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>

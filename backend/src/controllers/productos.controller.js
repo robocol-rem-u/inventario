@@ -34,22 +34,21 @@ productosCtrl.createProducto = async (req, res) => {
                 newProducto.setImgUrl(data.Location);
                 await newProducto.save()
                 console.log(newProducto)
-                res.send("Create Producto")
+                res.json(newProducto)
             }
         })
     }
     else{
         await newProducto.save()
         console.log(newProducto)
-        res.send("Create Producto")
+        res.json(newProducto)
     }
 }
 
 productosCtrl.deleteProducto = async (req, res) => {
     console.log(req.params)
     await Producto.findByIdAndDelete(req.params.id)
-    res.
-    send("Delete Producto")
+    res.send("Delete Producto")
 }
 
 
