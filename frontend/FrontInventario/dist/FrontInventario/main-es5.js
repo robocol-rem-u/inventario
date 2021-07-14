@@ -1645,7 +1645,7 @@
               _this4.productos = prs;
               console.log(_this4.productos[1]._id);
             }, function (err) {
-              console.log("Hubo un error al tratar de obtener los productos");
+              console.log(err);
 
               _this4.toastr.error("Hubo un problema al buscar los productos", "Ups!", {
                 timeOut: 0
@@ -1769,6 +1769,7 @@
         _createClass(ProductoService, [{
           key: "getProducts",
           value: function getProducts() {
+            console.log(this.URL_API);
             return this.httpClient.get(this.URL_API);
           }
         }, {

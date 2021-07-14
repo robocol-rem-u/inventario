@@ -22,7 +22,7 @@ export class CatalogoComponent implements OnInit {
         console.log(this.productos[1]._id);
       },
       err => {
-        console.log("Hubo un error al tratar de obtener los productos");
+        console.log(err);
         this.toastr.error("Hubo un problema al buscar los productos", "Ups!", {
           timeOut: 0
         });

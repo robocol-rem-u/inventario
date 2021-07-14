@@ -15,6 +15,7 @@ export class ProductoService {
   constructor(private httpClient : HttpClient) { }
 
   getProducts():Observable<Producto[]>{
+    console.log(this.URL_API);
     return this.httpClient.get<Producto[]>(this.URL_API);
   }
   getHistorialProduct(idProducto: string):Observable<Historial[]>{

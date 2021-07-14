@@ -805,7 +805,7 @@ class CatalogoComponent {
             this.productos = prs;
             console.log(this.productos[1]._id);
         }, err => {
-            console.log("Hubo un error al tratar de obtener los productos");
+            console.log(err);
             this.toastr.error("Hubo un problema al buscar los productos", "Ups!", {
                 timeOut: 0
             });
@@ -863,6 +863,7 @@ class ProductoService {
         this.URL_API = src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_0__["environment"].baseUrl + 'productos';
     }
     getProducts() {
+        console.log(this.URL_API);
         return this.httpClient.get(this.URL_API);
     }
     getHistorialProduct(idProducto) {
