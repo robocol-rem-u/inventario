@@ -16,7 +16,7 @@ prestamoCtrl.getPrestamos = async (req, res) => {
  * @param {*} res 
  */
  prestamoCtrl.getPrestamosProducto = async (req, res) => {
-    const elementosPrestamo = await Prestamo.find( {"id_producto" : req.body.id_producto})
+    const elementosPrestamo = await Prestamo.find( {"id_producto" : req.params.id})
     res.json(elementosPrestamo)
 }
 prestamoCtrl.createPrestamo = async (req, res) => {

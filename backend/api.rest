@@ -13,7 +13,7 @@ Content-Type: application/json
 
 {
 
-        "nombre": "prueba1 ",
+        "nombre": "prueba2 ",
         "descripcion": "vamos ",
         "proveedor": "tryyy",
         "familia": "familia ",
@@ -25,6 +25,26 @@ Content-Type: application/json
         "cantidadEnArreglo": "5" 
 
 }
+
+###
+
+POST http://localhost:5000/api/historial
+Content-Type: application/json
+
+{
+    "cantidad": "6666777",
+    "tipoMovimiento": "desde a a b",
+    "responsable": "yo", 
+    "fecha": "2021-07-14T22:06:29.156Z" ,  
+    "id_producto": "60ef5fe530a37f8f2c4e995a"
+        
+
+}
+###
+
+GET http://localhost:5000/api/historial/60ef5fe530a37f8f2c4e995a
+
+
 
 ###
 GET http://localhost:5000/api/usuario 

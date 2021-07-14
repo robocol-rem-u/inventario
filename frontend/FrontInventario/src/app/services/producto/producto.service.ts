@@ -19,17 +19,6 @@ export class ProductoService {
     console.log(this.URL_API);
     return this.httpClient.get<Producto[]>(this.URL_API);
   }
-  getHistorialProduct(idProducto: string):Observable<Historial[]>{
-    console.warn(environment.baseUrl+"/historial/"+idProducto)
-    return this.httpClient.get<Historial[]>(environment.baseUrl+"/historial/"+idProducto);
-
-  }
-
-  getPrestamoProduct(idProducto: string):Observable<Prestamo[]>{
-    console.warn(environment.baseUrl+"/prestamos/"+idProducto)
-    return this.httpClient.get<Historial[]>(environment.baseUrl+"/prestamos/"+idProducto);
-
-  }
   //Se hizo así y no con un método normal para hacer un POST de producto, porque por alguna razón no estaba enviando bien la imagen.
   createProductByHtml(nombre: string, proveedor: string, familia: string, ubicacionEnCubiculo: string, descripcion: string, cantidadTotal: string, image: File){
     const fd = new FormData();

@@ -33,7 +33,7 @@ historialCtrl.updateHistorial = async (req, res) => {
  * @param {*} res 
  */
  historialCtrl.getHistorialSegunProducto = async (req, res) => {
-    const historialProducto = await EnUso.find( {"id_producto" : req.body.id_producto})
+    const historialProducto = await Historial.find( {"id_producto" : req.params.id})
     res.json(historialProducto)
 }
 
