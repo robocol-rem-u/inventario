@@ -40,5 +40,6 @@ app.use("/api/pedidos", require("./routes/pedido.routes"))
 app.use("/api/usuario", require("./routes/usuario.routes"))
 app.use("/api/mensajes", require("./routes/mensajes.routes"))
 app.use("/api/prestamos", require("./routes/prestamos.routes"))
+app.use("/api/historial", require("./routes/historial.routes"))
 
 module.exports = app

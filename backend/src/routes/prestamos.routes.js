@@ -19,6 +19,7 @@ router.post("/", prestamoCtrl.createPrestamo)
 // api/products/:id
 router.put("/:id", prestamoCtrl.updatePrestamo)
 router.delete("/:id", prestamoCtrl.deletePrestamo)
+router.get("/:id", prestamoCtrl.getPrestamosProducto)
 
 
 //Este objeto es el que voy a usar, entonces lo exporto

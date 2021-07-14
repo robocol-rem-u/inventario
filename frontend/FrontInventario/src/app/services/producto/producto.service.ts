@@ -4,6 +4,7 @@ import {Producto} from '../../models/producto';
 import { Historial } from "../../models/historial";
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Prestamo } from 'src/app/models/prestamo';
 
 @Injectable({
   providedIn: 'root'
@@ -19,12 +20,16 @@ export class ProductoService {
     return this.httpClient.get<Producto[]>(this.URL_API);
   }
   getHistorialProduct(idProducto: string):Observable<Historial[]>{
-    console.warn(this.URL_API+"/"+idProducto+"/historial")
-    return this.httpClient.get<Historial[]>(this.URL_API+"/"+idProducto+"/historial");
+    console.warn(environment.baseUrl+"/historial/"+idProducto)
+    return this.httpClient.get<Historial[]>(environment.baseUrl+"/historial/"+idProducto);
 
   }
 
+  getPrestamoProduct(idProducto: string):Observable<Prestamo[]>{
+    console.warn(environment.baseUrl+"/prestamos/"+idProducto)
+    return this.httpClient.get<Historial[]>(environment.baseUrl+"/prestamos/"+idProducto);
 
+  }
   //Se hizo así y no con un método normal para hacer un POST de producto, porque por alguna razón no estaba enviando bien la imagen.
   createProductByHtml(nombre: string, proveedor: string, familia: string, ubicacionEnCubiculo: string, descripcion: string, cantidadTotal: string, image: File){
     const fd = new FormData();
