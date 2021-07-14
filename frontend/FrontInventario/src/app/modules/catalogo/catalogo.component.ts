@@ -19,7 +19,11 @@ export class CatalogoComponent implements OnInit {
     this.productoService.getProducts().subscribe(
       prs => {
         this.productos = prs;
-        console.log(this.productos[1]._id);
+        if(this.productos.length == 0){
+          this.toastr.info("No hay ningún producto para mostrar", "Hey", {
+            timeOut: 0
+          });
+        }
       },
       err => {
         console.log(err);

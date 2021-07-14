@@ -1,23 +1,19 @@
 <div id="fondo">
   <div class="container">
     <form   [formGroup]="userForm" (ngSubmit)= "onLogin(userForm)">
-      <div class="row" *ngIf="ingreso==false">
-        <h3> Contraseña incorrecta</h3>
-      </div>
-
       <div class="row">
         <div class="col-25">
-          <label for="fname" style="padding-top: 0px">USUARIO ROBOCOL</label>
+          <label for="fname" style="padding-top: 0px">Usuario Uniandes</label>
         </div>
-        <div class="col-75">
-          <input novalidate id="usuarioUniandes"  formControlName="usuarioUniandes"  type="text"  />
+        <div class="col-75" style="margin-left: 2rem;">
+          <input novalidate id="usuarioUniandes"  formControlName="usuarioUniandes"  type="text"  required/>
         </div>
       </div>
       <div class="row">
         <div class="col-25">
           <label for="pwd">Contraseña</label>
         </div>
-        <div class="col-75">
+        <div class="col-75" style="margin-left: 2rem;">
           <input
            id="contrasenia"  formControlName="contrasenia"
             type="password"
