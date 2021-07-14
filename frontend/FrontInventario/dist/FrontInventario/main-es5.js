@@ -153,7 +153,7 @@
 
             this.usuarioService.loginUser(form.value).subscribe(function (res) {
               console.log("xd", form.value);
-              _this.router.navigateByUrl("/menu"), _this.infoUsuario = res;
+              _this.router.navigateByUrl("/robocol/menu"), _this.infoUsuario = res;
             });
             this.ingreso = false;
           }
@@ -536,7 +536,7 @@
         },
         decls: 17,
         vars: 0,
-        consts: [["id", "fondo"], ["type", "button", "routerLink", "/registroProducto", 1, "row", "btn-warning", 2, "margin-top", "0%"], [1, "col-7"], ["src", "../assets/images/registro.png"], [1, "col-5"], ["type", "button", "routerLink", "/catalogo", 1, "row", "btn-warning", 2, "margin-top", "4rem"], ["src", "../assets/images/consulta.png"]],
+        consts: [["id", "fondo"], ["type", "button", "routerLink", "/robocol/registroProducto", 1, "row", "btn-warning", 2, "margin-top", "0%"], [1, "col-7"], ["src", "../assets/images/registro.png"], [1, "col-5"], ["type", "button", "routerLink", "/robocol/catalogo", 1, "row", "btn-warning", 2, "margin-top", "4rem"], ["src", "../assets/images/consulta.png"]],
         template: function Menu_opcionesComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -935,26 +935,26 @@
         },
         providers: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]],
         imports: [[ngx_toastr__WEBPACK_IMPORTED_MODULE_6__["ToastrModule"].forRoot(), _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _modules_registro_producto_registro_producto_module__WEBPACK_IMPORTED_MODULE_8__["RegistroProductoModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot([{
-          path: 'registroProducto',
+          path: '/robocol/registroProducto',
           component: _modules_registro_producto_registro_producto_principal_registro_producto_principal_component__WEBPACK_IMPORTED_MODULE_9__["RegistroProductoPrincipalComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {
-          path: 'menu',
+          path: '/robocol/menu',
           component: _modules_menu_opciones_menu_opciones_component__WEBPACK_IMPORTED_MODULE_11__["Menu_opcionesComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {
-          path: 'ingreso-usuario',
+          path: '/robocol/ingreso-usuario',
           component: _modules_ingreso_usuario_ingreso_usuario_component__WEBPACK_IMPORTED_MODULE_13__["IngresoUsuarioComponent"]
         }, {
-          path: '',
+          path: '/robocol',
           pathMatch: 'full',
           redirectTo: 'ingreso-usuario'
         }, {
-          path: 'historial',
+          path: '/robocol/historial',
           component: _modules_historial_historial_component__WEBPACK_IMPORTED_MODULE_14__["HistorialComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }, {
-          path: 'catalogo',
+          path: '/robocol/catalogo',
           component: _modules_catalogo_catalogo_component__WEBPACK_IMPORTED_MODULE_18__["CatalogoComponent"],
           canActivate: [_guard_usuario_guard__WEBPACK_IMPORTED_MODULE_15__["UsuarioGuard"]]
         }]), _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_2__["BrowserAnimationsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_0__["FormsModule"], igniteui_angular__WEBPACK_IMPORTED_MODULE_7__["IgxListModule"], _modules_menu_opciones_menu_opciones_module__WEBPACK_IMPORTED_MODULE_10__["Menu_opcionesModule"], _modules_ingreso_usuario_ingreso_usuario_module__WEBPACK_IMPORTED_MODULE_12__["IngresoUsuarioModule"], _modules_catalogo_catalogo_module__WEBPACK_IMPORTED_MODULE_17__["CatalogoModule"], _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_16__["NgbModule"]]]
@@ -1655,12 +1655,12 @@
         }, {
           key: "navigate",
           value: function navigate(url) {
-            this.router.navigateByUrl('/' + url);
+            this.router.navigateByUrl('/robocol/' + url);
           }
         }, {
           key: "irADisponibilidad",
           value: function irADisponibilidad(pr) {
-            this.router.navigateByUrl("/disponibilidad/" + pr._id);
+            this.router.navigateByUrl("/robocol/disponibilidad/" + pr._id);
           }
         }]);
 
@@ -1872,7 +1872,7 @@
           this.toastr = toastr;
 
           this.btnClick = function () {
-            this.router.navigateByUrl('/menu');
+            this.router.navigateByUrl('/robocol/menu');
           };
         }
 
@@ -1938,7 +1938,7 @@
         selectors: [["app-registro-producto-principal"]],
         decls: 81,
         vars: 1,
-        consts: [[1, "atras"], ["routerLink", "/menu", "src", "../assets/images/regresar.png", 1, "regresar", 2, "height", "100%", "border-radius", "0", "margin", "auto", 3, "click"], [1, "out"], [1, "container"], ["id", "title"], [3, "submit"], [1, "row"], [1, "col-25"], ["for", "nombre"], [1, "col-75"], ["type", "text", "id", "nombre", "name", "nombre", "placeholder", "Ingresa el nombre del producto", "required", ""], ["nombre", ""], ["for", "proveedor"], ["id", "proveedor", "name", "proveedor", "required", ""], ["proveedor", ""], ["value", "vistronica"], ["value", "nasa"], ["value", "elmono"], ["for", "familia"], ["id", "familia", "name", "familia", "placeholder", "\xBFA qu\xE9 familia pertenece?", "required", ""], ["familia", ""], ["value", "rojo"], ["value", "verde"], ["value", "amarillo"], ["value", "negro"], ["for", "ubicacionEnCubiculo"], ["id", "ubicacionEnCubiculo", "name", "ubicacionEnCubiculo", "placeholder", "\xBFEn qu\xE9 parte del cub\xEDculo se encuentra?", "required", ""], ["ubicacionEnCubiculo", ""], ["value", "piso"], ["value", "repisa"], ["value", "caja"], ["value", "cajon"], ["for", "descripcion"], ["id", "descripcion", "name", "descripcion", "placeholder", "Escribe una breve descripci\xF3n del producto", "required", "", 2, "height", "200px"], ["descripcion", ""], ["type", "number", "id", "cantidadTotal", "name", "cantidadTotal", "placeholder", "\xBFCu\xE1ntas unidades existen en total?", "required", ""], ["cantidadTotal", ""], ["for", "foto"], ["type", "file", "id", "image", "name", "image", "placeholder", "Imagen del producto", 1, "d-none", 3, "change"], ["image", ""], ["alt", "Seleccionar imagen", 1, "foto", "img-fluid", 3, "src", "click"], [1, "row", 2, "margin-top", "12px"], ["type", "submit", "value", "Guardar"]],
+        consts: [[1, "atras"], ["routerLink", "/robocol/menu", "src", "../assets/images/regresar.png", 1, "regresar", 2, "height", "100%", "border-radius", "0", "margin", "auto", 3, "click"], [1, "out"], [1, "container"], ["id", "title"], [3, "submit"], [1, "row"], [1, "col-25"], ["for", "nombre"], [1, "col-75"], ["type", "text", "id", "nombre", "name", "nombre", "placeholder", "Ingresa el nombre del producto", "required", ""], ["nombre", ""], ["for", "proveedor"], ["id", "proveedor", "name", "proveedor", "required", ""], ["proveedor", ""], ["value", "vistronica"], ["value", "nasa"], ["value", "elmono"], ["for", "familia"], ["id", "familia", "name", "familia", "placeholder", "\xBFA qu\xE9 familia pertenece?", "required", ""], ["familia", ""], ["value", "rojo"], ["value", "verde"], ["value", "amarillo"], ["value", "negro"], ["for", "ubicacionEnCubiculo"], ["id", "ubicacionEnCubiculo", "name", "ubicacionEnCubiculo", "placeholder", "\xBFEn qu\xE9 parte del cub\xEDculo se encuentra?", "required", ""], ["ubicacionEnCubiculo", ""], ["value", "piso"], ["value", "repisa"], ["value", "caja"], ["value", "cajon"], ["for", "descripcion"], ["id", "descripcion", "name", "descripcion", "placeholder", "Escribe una breve descripci\xF3n del producto", "required", "", 2, "height", "200px"], ["descripcion", ""], ["type", "number", "id", "cantidadTotal", "name", "cantidadTotal", "placeholder", "\xBFCu\xE1ntas unidades existen en total?", "required", ""], ["cantidadTotal", ""], ["for", "foto"], ["type", "file", "id", "image", "name", "image", "placeholder", "Imagen del producto", 1, "d-none", 3, "change"], ["image", ""], ["alt", "Seleccionar imagen", 1, "foto", "img-fluid", 3, "src", "click"], [1, "row", 2, "margin-top", "12px"], ["type", "submit", "value", "Guardar"]],
         template: function RegistroProductoPrincipalComponent_Template(rf, ctx) {
           if (rf & 1) {
             var _r7 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵgetCurrentView"]();

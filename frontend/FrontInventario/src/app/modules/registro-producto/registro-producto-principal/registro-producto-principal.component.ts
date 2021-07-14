@@ -23,7 +23,7 @@ export class RegistroProductoPrincipalComponent implements OnInit {
   }
 
   btnClick = function () {
-    this.router.navigateByUrl('/menu');
+    this.router.navigateByUrl('/robocol/menu');
   };
 
   addProductByHtml(nombre: HTMLInputElement, proveedor: HTMLSelectElement, familia: HTMLSelectElement, ubicacionEnCubiculo: HTMLSelectElement, descripcion: HTMLTextAreaElement, cantidadTotal: HTMLInputElement){

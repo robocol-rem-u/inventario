@@ -31,11 +31,11 @@ export class CatalogoComponent implements OnInit {
   }
 
   navigate(url:string){
-    this.router.navigateByUrl('/'+url);
+    this.router.navigateByUrl('/robocol/'+url);
   }
 
   irADisponibilidad(pr: Producto){
-    this.router.navigateByUrl("/disponibilidad/"+pr._id);
+    this.router.navigateByUrl("/robocol/disponibilidad/"+pr._id);
   }
 
 }

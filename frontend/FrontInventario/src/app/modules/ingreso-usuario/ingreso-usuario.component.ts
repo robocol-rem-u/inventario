@@ -30,7 +30,7 @@ export class IngresoUsuarioComponent implements OnInit {
 
     this.usuarioService.loginUser(form.value).subscribe(res=>{
       console.log("xd", form.value)
-      this.router.navigateByUrl("/menu"),
+      this.router.navigateByUrl("/robocol/menu"),
       this.infoUsuario=res
     })
     this.ingreso= false;
