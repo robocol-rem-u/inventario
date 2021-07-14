@@ -27,9 +27,7 @@ export class CatalogoComponent implements OnInit {
       },
       err => {
         console.log(err);
-        this.toastr.error("Hubo un problema al buscar los productos", "Ups!", {
-          timeOut: 0
-        });
+        this.toastr.error("Hubo un problema al buscar los productos", "Ups!");
       }
     );
   }

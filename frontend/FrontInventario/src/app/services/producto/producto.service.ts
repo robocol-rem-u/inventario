@@ -20,7 +20,7 @@ export class ProductoService {
     return this.httpClient.get<Producto[]>(this.URL_API);
   }
   //Se hizo así y no con un método normal para hacer un POST de producto, porque por alguna razón no estaba enviando bien la imagen.
-  createProductByHtml(nombre: string, proveedor: string, familia: string, ubicacionEnCubiculo: string, descripcion: string, cantidadTotal: string, image: File){
+  createProductByHtml(nombre: string, proveedor: string, familia: string, ubicacionEnCubiculo: string, descripcion: string, cantidadDisponiblesParaUso: string, cantidadDisponiblesParaArreglo: string, cantidadEnUso: string, cantidadEnArreglo: string, image: File){
     const fd = new FormData();
 
     fd.append("nombre", nombre);
@@ -28,11 +28,11 @@ export class ProductoService {
     fd.append("familia", familia);
     fd.append("ubicacionEnCubiculo", ubicacionEnCubiculo);
     fd.append("descripcion", descripcion);
-    fd.append("cantidadTotal", cantidadTotal);
-    fd.append("cantidadDisponiblesParaUso", "0");
-    fd.append("cantidadDisponiblesParaArreglo", "0");
-    fd.append("cantidadEnUso", "0");
-    fd.append("cantidadEnArreglo", "0");
+    fd.append("cantidadTotal", String(Number(cantidadDisponiblesParaUso) + Number(cantidadDisponiblesParaArreglo) + Number(cantidadEnUso) + Number(cantidadEnArreglo)));
+    fd.append("cantidadDisponiblesParaUso", cantidadDisponiblesParaUso);
+    fd.append("cantidadDisponiblesParaArreglo", cantidadDisponiblesParaArreglo);
+    fd.append("cantidadEnUso", cantidadEnUso);
+    fd.append("cantidadEnArreglo", cantidadEnArreglo);
     fd.append("image", image);
 
     return this.httpClient.post(this.URL_API, fd);
