@@ -15,7 +15,7 @@ const cors = require("cors")
 app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario'));
 
 // Send all requests to index.html
-app.get('robocol/*', function(req, res) {
+app.get('/robocol/*', function(req, res) {
   res.sendFile(path.join(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario/index.html'));
 });
 app.use(express.static('build'));
