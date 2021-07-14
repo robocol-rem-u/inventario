@@ -11,8 +11,10 @@ export class Producto {
     cantidadEnArreglo: Number;
     cantidadTotal: Number;
     image: File;
+    fotoPath: string;
+    _id: string;
   
-    constructor(nombre: string, descripcion: string, proveedor: string, ubicacionEnCubiculo: string, familia: string, cantidadTotal: Number, cantidadDisponiblesParaUso: Number, cantidadDisponiblesParaArreglo: Number, cantidadEnUso: Number, cantidadEnArreglo: Number, image: File) {
+    constructor(nombre: string, descripcion: string, proveedor: string, ubicacionEnCubiculo: string, familia: string, cantidadTotal: Number, cantidadDisponiblesParaUso: Number, cantidadDisponiblesParaArreglo: Number, cantidadEnUso: Number, cantidadEnArreglo: Number, image: File, fotoPath: string, id: string) {
       this.nombre = nombre;
       this.descripcion = descripcion;
       this.proveedor = proveedor;
@@ -24,5 +26,7 @@ export class Producto {
       this.cantidadEnUso = cantidadEnUso;
       this.cantidadTotal = cantidadTotal;
       this.image = image;
+      this.fotoPath = fotoPath;
+      this._id = id;
     }
   }
