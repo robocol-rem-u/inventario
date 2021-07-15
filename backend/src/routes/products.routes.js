@@ -24,6 +24,7 @@ router.post("/", productsCtrl.createProducto)
 router.put("/:id", productsCtrl.updateProducto)
 router.delete("/:id", productsCtrl.deleteProducto)
 router.delete("/", productsCtrl.deleteProductos)
+router.get("/:id", productsCtrl.getProducto)
 
 //Este objeto es el que voy a usar, entonces lo exporto
 module.exports = router
