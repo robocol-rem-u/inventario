@@ -63,5 +63,10 @@ productosCtrl.updateProducto = async (req, res) => {
     await Producto.findByIdAndUpdate(req.params.id)
     res.send("Update Producto")
 }
+productosCtrl.getProducto = async (req, res) => {
+    console.log(req.params)
+    const producto =await Producto.findById(req.params.id)
+    res.send(producto)
+}
 
 module.exports = productosCtrl
