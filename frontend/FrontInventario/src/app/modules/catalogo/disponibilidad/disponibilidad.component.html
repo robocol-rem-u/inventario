@@ -1,33 +1,29 @@
 <div id="atras" >
-  <img id="regresar" routerLink='/ingreso-usuario' style="height: 100%;
+  <img id="regresar" (click)="btnClick()" style="height: 100%;
   border-radius: 0; margin: auto;" src="../assets/images/regresar.png" />
 </div>
 <div id="contenedor">
   <div class="container">
-
-
-
-
   <div class="row">
     <div class="col-60 ">
       <div class="row ">
         <div class="col-8"> <label class="ficha" >  Disponible para utilizar </label> </div>
-        <div class="col-4 numero "><label class="numero ficha"> 2546</label> </div>
+        <div class="col-4 numero "><label class="numero ficha"> {{producto.cantidadDisponiblesParaUso}}</label> </div>
       </div>
       <div class="row">
         <div class="col-8"> <label class="ficha">En uso</label> </div>
-        <div class="col-4 numero "><label class="numero ficha">1</label> </div>
+        <div class="col-4 numero "><label class="numero ficha">{{producto.cantidadEnUso}}</label> </div>
       </div>
     </div>
 
     <div class="col-50 ">
       <div class="row">
         <div class="col-8"> <label class="ficha">Disponible para arreglar</label> </div>
-        <div class="col-4 numero "><label class= "numero ficha"> 1041</label> </div>
+        <div class="col-4 numero "><label class= "numero ficha"> {{producto.cantidadDisponiblesParaArreglo}}</label> </div>
       </div>
       <div class="row">
         <div class="col-8"> <label class="ficha">En arreglo</label> </div>
-        <div class="col-4 numero" ><label class="numero ficha"> 1041</label> </div>
+        <div class="col-4 numero" ><label class="numero ficha"> {{producto.cantidadEnArreglo}}</label> </div>
       </div>
     </div>
 
@@ -66,7 +62,7 @@
   <div class="row">
   <button type="button" class="btn btn-success" >Mover</button>
  </div>
-
+<br>
 <hr>
 
   <div class="row">
@@ -95,10 +91,39 @@
   </div>
   <br>
 <hr>
+<div class="row">
+  <div class="col-50">
+    <label class="color">Eliminar desde</label>
+    <br>
+    <select id="familia" name="Desde">
+      <option value="Disp.uso">Disponible para utilizar</option>
+      <option value="Disp.arreglo">Disponible para arreglar</option>
+      <option value="uso">En uso</option>
+      <option value="arreglo">En arreglo</option>
+      </select>
+  </div>
+
+  <div class="col-20 ">
+    <label class="color">Cantidad</label>
+    <br>
+    <input type="number" id="tentacles" name="tentacles"
+     min="1" max="1000">
+  </div>
+  <div class="col-50">
+    <br>
+    <br>
+    <button type="button" class="btn btn-danger botonAgregar" >Retirar/Botar cantidad</button>
+
+    <br>
+      </div>
+</div>
+<br>
+<hr>
+
   <div class="row">
     <div class="col">
       <div class="row">
-         <button type="button" class="btn btn-success" >Ver historial</button>
+         <button type="button" class="btn btn-success" (click)="irAHistorial();" >Ver historial</button>
       </div>
     </div>
     <div class="col">

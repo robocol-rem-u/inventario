@@ -37,4 +37,9 @@ export class ProductoService {
 
     return this.httpClient.post(this.URL_API, fd);
   }
+
+  getProductoPorId(idProducto: string):Observable<Producto>{
+    return this.httpClient.get<Producto>(this.URL_API+"/"+idProducto);
+
+  }
 }

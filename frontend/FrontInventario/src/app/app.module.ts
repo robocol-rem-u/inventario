@@ -38,7 +38,7 @@ import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/dispo
       { path: 'robocol/registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
       { path: 'robocol/menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
       { path: 'robocol/ingreso-usuario', component: IngresoUsuarioComponent, canActivate: [UsuarioGuardLogged]},
-      { path: 'robocol/historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
+      { path: 'robocol/historial/:id', component: HistorialComponent, canActivate:[UsuarioGuard]},
       { path: 'robocol/catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
       { path: 'robocol/disponibilidad/:id', component: DisponibilidadComponent, canActivate:[UsuarioGuard] },
     ]),

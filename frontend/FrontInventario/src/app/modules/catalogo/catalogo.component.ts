@@ -12,7 +12,7 @@ import {ToastrService} from 'ngx-toastr';
 export class CatalogoComponent implements OnInit {
 
   productos: Producto[];
-
+  selected = false;
   constructor(private router: Router, private productoService: ProductoService, private toastr: ToastrService) { }
 
   ngOnInit() {
@@ -39,7 +39,7 @@ export class CatalogoComponent implements OnInit {
   }
 
   irADisponibilidad(pr: Producto){
-    this.router.navigateByUrl("/robocol/disponibilidad/"+pr._id);
+    this.router.navigate(["/robocol/disponibilidad/",pr._id]);
   }
 
 }

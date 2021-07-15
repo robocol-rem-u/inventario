@@ -13,9 +13,12 @@ export class HistorialService {
 
   constructor(private httpClient : HttpClient) { }
 
+
 getHistorialProduct(idProducto: string):Observable<Historial[]>{
   console.warn(this.URL_API+"/"+idProducto)
   return this.httpClient.get<Historial[]>(this.URL_API+"/"+idProducto);
+}
+
 
 }
-}
+
