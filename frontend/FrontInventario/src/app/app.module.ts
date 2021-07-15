@@ -26,6 +26,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CatalogoModule } from './modules/catalogo/catalogo.module';
 import { CatalogoComponent } from './modules/catalogo/catalogo.component';
 import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/disponibilidad.component';
+import { PrestamoComponent } from './modules/prestamo/prestamo/prestamo.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -41,6 +42,7 @@ import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/dispo
       { path: 'robocol/historial/:id', component: HistorialComponent, canActivate:[UsuarioGuard]},
       { path: 'robocol/catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
       { path: 'robocol/disponibilidad/:id', component: DisponibilidadComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/prestamos/:id', component: PrestamoComponent, canActivate:[UsuarioGuard] },
       {path:'', redirectTo:'robocol/ingreso-usuario', pathMatch: 'full' },
     ]),
     BrowserAnimationsModule,

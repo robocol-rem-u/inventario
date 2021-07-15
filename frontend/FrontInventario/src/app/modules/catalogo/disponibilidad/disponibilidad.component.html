@@ -11,7 +11,7 @@
         <div class="col-4 numero "><label class="numero ficha"> {{producto.cantidadDisponiblesParaUso}}</label> </div>
       </div>
       <div class="row">
-        <div class="col-8"> <label class="ficha">En uso</label> </div>
+        <div class="col-8" (click)="irAPrestamos()"> <label class="ficha" (click)="irAPrestamos()">En uso</label> </div>
         <div class="col-4 numero "><label class="numero ficha">{{producto.cantidadEnUso}}</label> </div>
       </div>
     </div>

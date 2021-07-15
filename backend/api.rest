@@ -1,5 +1,5 @@
 
-GET http://localhost:5000/api/productos/60ef71d56e45c11a8c6f126e
+GET http://localhost:5000/api/productos/60ef5fe530a37f8f2c4e995a
 ###
 POST http://localhost:5000/api/usuario/login 
 Content-Type: application/json
@@ -44,7 +44,8 @@ Content-Type: application/json
 
 GET http://localhost:5000/api/historial/60ef5fe530a37f8f2c4e995a
 
-
+###
+GET http://localhost:5000/api/historial/60ef71d56e45c11a8c6f126e
 
 ###
 GET http://localhost:5000/api/usuario 
