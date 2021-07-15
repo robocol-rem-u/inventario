@@ -18,7 +18,7 @@ const router = Router()
 // api/products
 router.get("/", productsCtrl.getProductos)
 //Con upload.single("image") estamos diciendo que antes de crear el producto en la base de datos, guarde la imagen que viene con el nombre image en el servidor
-// router.post("/", storageS3.upload, productsCtrl.createProducto)
+router.post("/", productsCtrl.createProducto)
 
 // api/products/:id
 router.put("/:id", productsCtrl.updateProducto)

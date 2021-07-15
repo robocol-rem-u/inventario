@@ -1,11 +1,11 @@
 <div class="atras" >
-   <img (click)="btnClick();" class="regresar" routerLink='/menu' style="height: 100%;
+   <img (click)="btnClick();" class="regresar" routerLink='/robocol/menu' style="height: 100%;
       border-radius: 0; margin: auto;" src="../assets/images/regresar.png" />
 </div>
 <div class="out">
    <div class="container">
       <h3 id="title">REGISTRO DE MATERIAL</h3>
-      <form (submit)="addProductByHtml(nombre, proveedor, familia, ubicacionEnCubiculo, descripcion, cantidadTotal)">
+      <form (submit)="addProductByHtml(nombre, proveedor, familia, ubicacionEnCubiculo, descripcion, cantidadDisponiblesParaUso, cantidadDisponiblesParaArreglo, cantidadEnUso, cantidadEnArreglo)">
       <div class="row">
          <div class="col-25">
             <label for="nombre">Nombre</label>
@@ -62,10 +62,34 @@
       </div>
       <div class="row">
          <div class="col-25">
-            <label for="nombre">Cantidad total</label>
+            <label for="nombre">Cantidad disponibles para uso</label>
          </div>
          <div class="col-75">
-            <input type="number" id="cantidadTotal" name="cantidadTotal" placeholder="¿Cuántas unidades existen en total?" required #cantidadTotal>
+            <input type="number" id="cantidadDisponiblesParaUso" name="cantidadDisponiblesParaUso" placeholder="¿Cuántas unidades están disponibles?" required #cantidadDisponiblesParaUso>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-25">
+            <label for="nombre">Cantidad disponibles para arreglo</label>
+         </div>
+         <div class="col-75">
+            <input type="number" id="cantidadDisponiblesParaArreglo" name="cantidadDisponiblesParaArreglo" placeholder="¿Cuántas unidades pueden arreglarse?" required #cantidadDisponiblesParaArreglo>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-25">
+            <label for="nombre">Cantidad en uso</label>
+         </div>
+         <div class="col-75">
+            <input type="number" id="cantidadEnUso" name="cantidadEnUso" placeholder="¿Cuántas unidades están prestadas o siendo usadas?" required #cantidadEnUso>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-25">
+            <label for="nombre">Cantidad en arreglo</label>
+         </div>
+         <div class="col-75">
+            <input type="number" id="cantidadEnArreglo" name="cantidadEnArreglo" placeholder="¿Cuántas unidades están siendo arregladas?" required #cantidadEnArreglo>
          </div>
       </div>
       <div class="row">

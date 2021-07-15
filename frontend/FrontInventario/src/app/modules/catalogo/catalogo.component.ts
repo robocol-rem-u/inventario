@@ -12,30 +12,32 @@ import {ToastrService} from 'ngx-toastr';
 export class CatalogoComponent implements OnInit {
 
   productos: Producto[];
-
+  selected = false;
   constructor(private router: Router, private productoService: ProductoService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.productoService.getProducts().subscribe(
       prs => {
         this.productos = prs;
-        console.log(this.productos[1]._id);
+        if(this.productos.length == 0){
+          this.toastr.info("No hay ningún producto para mostrar", "Hey", {
+            timeOut: 0
+          });
+        }
       },
       err => {
-        console.log("Hubo un error al tratar de obtener los productos");
-        this.toastr.error("Hubo un problema al buscar los productos", "Ups!", {
-          timeOut: 0
-        });
+        console.log(err);
+        this.toastr.error("Hubo un problema al buscar los productos", "Ups!");
       }
     );
   }
 
   navigate(url:string){
-    this.router.navigateByUrl('/'+url);
+    this.router.navigateByUrl('/robocol/'+url);
   }
 
   irADisponibilidad(pr: Producto){
-    this.router.navigateByUrl("/disponibilidad/"+pr._id);
+    this.router.navigate(["/robocol/disponibilidad/",pr._id]);
   }
 
 }

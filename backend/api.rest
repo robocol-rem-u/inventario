@@ -1,0 +1,58 @@
+
+GET http://localhost:5000/api/productos
+###
+POST http://localhost:5000/api/usuario/login 
+Content-Type: application/json
+
+{
+"usuarioUniandes":"bc.barahona" , "contrasenia": "201812721"
+}
+### 
+POST http://localhost:5000/api/productos 
+Content-Type: application/json
+
+{
+
+        "nombre": "prueba2 ",
+        "descripcion": "vamos ",
+        "proveedor": "tryyy",
+        "familia": "familia ",
+        "ubicacionEnCubiculo": "abajo ",
+        "cantidadTotal": "25",
+        "cantidadDisponiblesParaUso": "1",
+        "cantidadDisponiblesParaArreglo": "19",
+        "cantidadEnUso": "0",
+        "cantidadEnArreglo": "5" 
+
+}
+
+###
+
+POST http://localhost:5000/api/historial
+Content-Type: application/json
+
+{
+    "cantidad": "6666777",
+    "tipoMovimiento": "desde a a b",
+    "responsable": "yo", 
+    "fecha": "2021-07-14T22:06:29.156Z" ,  
+    "id_producto": "60ef5fe530a37f8f2c4e995a"
+        
+
+}
+###
+
+GET http://localhost:5000/api/historial/60ef5fe530a37f8f2c4e995a
+
+
+
+###
+GET http://localhost:5000/api/usuario 
+Content-Type: application/json
+
+{
+"usuarioUniandes":"fk.luepke146" , "nombre": "Franz Luepke", "contrasenia": "201210752", "admin": true , "lider": true
+}
+###
+GET http://localhost:5000/api/usuario 
+

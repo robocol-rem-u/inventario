@@ -23,14 +23,14 @@ export class RegistroProductoPrincipalComponent implements OnInit {
   }
 
   btnClick = function () {
-    this.router.navigateByUrl('/menu');
+    this.router.navigateByUrl('/robocol/menu');
   };
 
-  addProductByHtml(nombre: HTMLInputElement, proveedor: HTMLSelectElement, familia: HTMLSelectElement, ubicacionEnCubiculo: HTMLSelectElement, descripcion: HTMLTextAreaElement, cantidadTotal: HTMLInputElement){
+  addProductByHtml(nombre: HTMLInputElement, proveedor: HTMLSelectElement, familia: HTMLSelectElement, ubicacionEnCubiculo: HTMLSelectElement, descripcion: HTMLTextAreaElement, cantidadDisponiblesParaUso: HTMLInputElement, cantidadDisponiblesParaArreglo: HTMLInputElement, cantidadEnUso: HTMLInputElement, cantidadEnArreglo: HTMLInputElement){
     this.toastr.info("Estamos agregando tu producto al catálogo","Un momento", {
       timeOut: 0
     });
-    this.productoService.createProductByHtml(nombre.value, proveedor.value, familia.value, ubicacionEnCubiculo.value, descripcion.value, cantidadTotal.value, this.file).subscribe(
+    this.productoService.createProductByHtml(nombre.value, proveedor.value, familia.value, ubicacionEnCubiculo.value, descripcion.value, cantidadDisponiblesParaUso.value, cantidadDisponiblesParaArreglo.value, cantidadEnUso.value, cantidadEnArreglo.value, this.file).subscribe(
       res => {
         this.toastr.clear();
         console.log(res);

@@ -2,7 +2,7 @@
 //El enrutador es un objeto que nos permite guardar urls
 const {Router} = require("express")
 
-const historialCtrl = require("../controllers/historial.controller")
+const prestamoCtrl = require("../controllers/prestamo.controller")
 
 //Necesito mínimo 4 rutas para cada clase, CRUD
 
@@ -13,13 +13,13 @@ const router = Router()
 //Me llega una petición a esta ruta y le digo al controlador para saber qué hacer
 
 // api/products
-router.get("/", historialCtrl.getHistoriales)
-router.post("/", historialCtrl.createHistorial)
+router.get("/", prestamoCtrl.getPrestamos)
+router.post("/", prestamoCtrl.createPrestamo)
 
 // api/products/:id
-router.put("/:id", historialCtrl.updateHistorial)
-router.delete("/:id", historialCtrl.deleteHistorial)
-router.get("/:id", historialCtrl.getHistorialSegunProducto)
+router.put("/:id", prestamoCtrl.updatePrestamo)
+router.delete("/:id", prestamoCtrl.deletePrestamo)
+router.get("/:id", prestamoCtrl.getPrestamosProducto)
 
 
 //Este objeto es el que voy a usar, entonces lo exporto

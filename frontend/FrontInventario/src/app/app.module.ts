@@ -20,10 +20,12 @@ import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuar
 //Historial
 import { HistorialComponent } from './modules/historial/historial.component';
 import { UsuarioGuard } from './guard/usuario.guard';
+import { UsuarioGuardLogged } from './guard/usuarioLogged.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //Catalogo
 import { CatalogoModule } from './modules/catalogo/catalogo.module';
 import { CatalogoComponent } from './modules/catalogo/catalogo.component';
+import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/disponibilidad.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,12 +35,13 @@ import { CatalogoComponent } from './modules/catalogo/catalogo.component';
     RegistroProductoModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
-      { path: 'menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
-      { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
-      { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
-      { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
-      { path: 'catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/ingreso-usuario', component: IngresoUsuarioComponent, canActivate: [UsuarioGuardLogged]},
+      { path: 'robocol/historial/:id', component: HistorialComponent, canActivate:[UsuarioGuard]},
+      { path: 'robocol/catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/disponibilidad/:id', component: DisponibilidadComponent, canActivate:[UsuarioGuard] },
+      {path:'', redirectTo:'robocol/ingreso-usuario', pathMatch: 'full' },
     ]),
     BrowserAnimationsModule,
     FormsModule,
