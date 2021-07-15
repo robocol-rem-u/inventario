@@ -41,6 +41,7 @@ import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/dispo
       { path: 'robocol/historial/:id', component: HistorialComponent, canActivate:[UsuarioGuard]},
       { path: 'robocol/catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
       { path: 'robocol/disponibilidad/:id', component: DisponibilidadComponent, canActivate:[UsuarioGuard] },
+      {path:'', redirectTo:'robocol/ingreso-usuario', pathMatch: 'full' },
     ]),
     BrowserAnimationsModule,
     FormsModule,
