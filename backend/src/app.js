@@ -2,6 +2,7 @@
 require("dotenv/config")
 const express = require("express")
 const path = require('path')
+const fileUpload = require('express-fileupload');
 
 //Morgan es un middleware para escuchar las peticiones que llegan por consola
 //Un middleware es una función para procesar algo antes de que termine
@@ -10,14 +11,14 @@ const morgan = require("morgan")
 //DECLARACIONES
 const app = express()
 const cors = require("cors")
-/*
+
 // Serve static files
 app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario'));
 
 // Send all requests to index.html
 app.get('/robocol/*', function(req, res) {
   res.sendFile(path.join(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario/index.html'));
-});*/
+});
 app.use(express.static('build'));
 
 //ATRIBUTOS
@@ -30,6 +31,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
+app.use(fileUpload());
 //Con esta línea le estamos diciendo a express que en la ubicación /public sirva los archivos estáticos que están en /storage/images
 //Pero fuera de la api nunca se va a saber que /storage/images es la verdadera ubicación
 // app.use("/public", express.static(`${__dirname}${path.sep}..${path.sep}storage${path.sep}images`));
