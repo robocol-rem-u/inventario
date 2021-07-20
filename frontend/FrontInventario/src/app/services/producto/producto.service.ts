@@ -42,4 +42,8 @@ export class ProductoService {
     return this.httpClient.get<Producto>(this.URL_API+"/"+idProducto);
 
   }
+  deleteProductoId(idProducto: string):Observable<Producto>{
+    return this.httpClient.delete<Producto>(this.URL_API+"/"+idProducto);
+
+  }
 }

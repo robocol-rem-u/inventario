@@ -26,6 +26,10 @@ export class DisponibilidadComponent implements OnInit {
   irAHistorial(){
     this.router.navigate(["/robocol/historial/",this.id_producto]);
   }
+  irAPrestamos(){
+    console.log("ir a prestamos")
+    this.router.navigate(["/robocol/prestamos/",this.id_producto]);
+  }
   ngOnInit() {
    this.id_producto=this.route.snapshot.paramMap.get('id');
    this.productoService.getProductoPorId(this.id_producto).subscribe(
