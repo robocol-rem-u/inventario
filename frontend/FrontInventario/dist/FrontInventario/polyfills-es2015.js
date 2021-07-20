@@ -300,7 +300,7 @@ if (objCtr.defineProperty) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "$localize", function() { return $localize; });
 /**
- * @license Angular v11.2.11
+ * @license Angular v11.2.14
  * (c) 2010-2021 Google LLC. https://angular.io/
  * License: MIT
  */
