@@ -35,7 +35,7 @@ export class ProductoService {
     fd.append("cantidadEnArreglo", cantidadEnArreglo);
     fd.append("image", image);
 
-    return this.httpClient.post(this.URL_API, fd);
+    return this.httpClient.post(this.URL_API, fd,{responseType: 'text'});
   }
 
   getProductoPorId(idProducto: string):Observable<Producto>{
