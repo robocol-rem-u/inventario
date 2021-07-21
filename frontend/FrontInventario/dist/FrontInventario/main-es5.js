@@ -156,7 +156,12 @@
       var rootApi = 'api';
       var environment = {
         production: false,
+<<<<<<< HEAD
         baseUrl: "http://".concat(host, ":").concat(port, "/").concat(rootApi, "/")
+=======
+        // baseUrl:`https://${host}:${port}/${rootApi}/`
+        baseUrl: "https://".concat(host, "/").concat(rootApi, "/")
+>>>>>>> 0f5649a99543b3ed3f7961df4e7af1ddacb7fea5
       };
       /*
        * For easier debugging in development mode, you can import the following file
