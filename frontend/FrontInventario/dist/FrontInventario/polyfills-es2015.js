@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Alvaro\Documents\Universidad\Robocol\inventario aux\inventario\frontend\FrontInventario\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\brend\OneDrive\Documentos\inventario\frontend\FrontInventario\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
@@ -300,7 +300,7 @@ if (objCtr.defineProperty) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "$localize", function() { return $localize; });
 /**
- * @license Angular v11.2.14
+ * @license Angular v11.2.11
  * (c) 2010-2021 Google LLC. https://angular.io/
  * License: MIT
  */

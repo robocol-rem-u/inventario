@@ -137,7 +137,6 @@ html {
 .igx-typography .igx-excel-filter__menu .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__menu .igx-excel-filter__secondary-header > h4 {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -147,7 +146,6 @@ html {
 .igx-typography .igx-excel-filter__secondary .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__secondary .igx-excel-filter__secondary-header > h4 {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -158,7 +156,6 @@ html {
 .igx-typography .igx-excel-filter__move header {
   font-weight: 400;
   font-size: 0.625rem;
-  font-style: normal;
   letter-spacing: 0.09375rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -166,7 +163,6 @@ html {
 .igx-typography .igx-excel-filter__menu--cosy .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__menu--cosy .igx-excel-filter__secondary-header > h4 {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -176,7 +172,6 @@ html {
 .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__secondary-header > h4 {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -185,7 +180,6 @@ html {
 .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__move header {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -194,7 +188,6 @@ html {
 .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-select span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear span, .igx-typography .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled span {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -202,7 +195,6 @@ html {
 .igx-typography .igx-excel-filter__menu--compact .igx-checkbox__label, .igx-typography .igx-excel-filter__menu--compact .igx-checkbox__label--before {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -210,7 +202,6 @@ html {
 .igx-typography .igx-excel-filter__secondary--cosy .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__secondary--cosy .igx-excel-filter__secondary-header > h4 {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -220,7 +211,6 @@ html {
 .igx-typography .igx-excel-filter__secondary--compact .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__secondary--compact .igx-excel-filter__secondary-header > h4 {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -228,7 +218,6 @@ html {
 .igx-typography .igx-banner__text {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -238,7 +227,6 @@ html {
 .igx-typography .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .igx-typography .tab-label, .igx-typography .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .igx-typography .tab-label, .igx-typography .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled .igx-typography .tab-label {
   font-weight: 400;
   font-size: 0.75rem;
-  font-style: normal;
   letter-spacing: 0.025rem;
   text-transform: none;
   line-height: 1rem;
@@ -247,16 +235,16 @@ html {
 .igx-typography .igx-button, .igx-typography .igx-button--flat, .igx-typography .igx-button--raised, .igx-typography .igx-button--outlined {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.046875rem;
   text-transform: uppercase;
   line-height: 1rem;
   text-align: center;
 }
-.igx-typography .igx-button--fab {
+.igx-typography .igx-button--fab p,
+.igx-typography .igx-button--fab span,
+.igx-typography .igx-button--fab div {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.046875rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -266,7 +254,6 @@ html {
 .igx-typography .igx-calendar__header-year {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -275,7 +262,6 @@ html {
 .igx-typography .igx-calendar__header-date {
   font-weight: 400;
   font-size: 2.125rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 2.5rem;
@@ -286,7 +272,6 @@ html {
 .igx-typography .igx-calendar-picker__date {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -295,7 +280,6 @@ html {
 .igx-typography .igx-calendar__date-content {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.03125rem;
   text-transform: none;
   line-height: 1.75rem;
@@ -306,7 +290,6 @@ html {
 .igx-typography .igx-calendar__year--current {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.03125rem;
   text-transform: none;
   line-height: 1.75rem;
@@ -319,7 +302,6 @@ html {
 .igx-typography .igx-card-header__title, .igx-typography .igx-card-header__title--small {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -330,7 +312,6 @@ html {
 .igx-typography .igx-card-header__title--small {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.00625rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -339,7 +320,6 @@ html {
 .igx-typography .igx-card-header__subtitle {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.00625rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -348,34 +328,32 @@ html {
 .igx-typography .igx-card-content > p {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
   margin: 0;
 }
 .igx-typography {
-  --category-chart-title-text-style: normal 300 6rem/7rem inherit;
+  --category-chart-title-text-style: 300 6rem/7rem inherit;
 }
 .igx-typography {
-  --category-chart-subtitle-text-style: normal 400 1rem/1.5rem inherit;
+  --category-chart-subtitle-text-style: 400 1rem/1.5rem inherit;
 }
 .igx-typography {
-  --category-chart-x-axis-label-text-style: normal 400 2.125rem/2.5rem inherit;
+  --category-chart-x-axis-label-text-style: 400 2.125rem/2.5rem inherit;
 }
 .igx-typography {
-  --category-chart-x-axis-title-text-style: normal 400 3rem/3.5625rem inherit;
+  --category-chart-x-axis-title-text-style: 400 3rem/3.5625rem inherit;
 }
 .igx-typography {
-  --category-chart-y-axis-label-text-style: normal 400 2.125rem/2.5rem inherit;
+  --category-chart-y-axis-label-text-style: 400 2.125rem/2.5rem inherit;
 }
 .igx-typography {
-  --category-chart-y-axis-title-text-style: normal 400 3rem/3.5625rem inherit;
+  --category-chart-y-axis-title-text-style: 400 3rem/3.5625rem inherit;
 }
 .igx-typography .igx-checkbox__label, .igx-typography .igx-checkbox__label--before {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -385,7 +363,6 @@ html {
 .igx-typography .igx-chip, .igx-typography .igx-chip__ghost, .igx-typography .igx-chip__ghost--cosy, .igx-typography .igx-chip__ghost--compact, .igx-typography .igx-chip--cosy, .igx-typography .igx-chip--compact {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -395,7 +372,6 @@ html {
 .igx-typography .igx-chip__ghost--compact .igx-chip__content {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -405,22 +381,20 @@ html {
 .igx-typography .igx-column-actions__header-title {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
   margin: 0;
 }
 .igx-typography {
-  --data-chart-title-text-style: normal 300 6rem/7rem inherit;
+  --data-chart-title-text-style: 300 6rem/7rem inherit;
 }
 .igx-typography {
-  --data-chart-subtitle-text-style: normal 400 1rem/1.5rem inherit;
+  --data-chart-subtitle-text-style: 400 1rem/1.5rem inherit;
 }
 .igx-typography .igx-dialog__window-title {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -431,7 +405,6 @@ html {
 .igx-typography .igx-dialog__window-content {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.03125rem;
   text-transform: none;
   line-height: 1.75rem;
@@ -445,7 +418,6 @@ html {
 .igx-typography .igx-drop-down__group label, .igx-drop-down__group .igx-typography label, .igx-typography .igx-drop-down__header {
   font-weight: 400;
   font-size: 0.625rem;
-  font-style: normal;
   letter-spacing: 0.09375rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -454,7 +426,6 @@ html {
 .igx-typography .igx-drop-down__item {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -463,7 +434,6 @@ html {
 .igx-typography .igx-expansion-panel__header-title {
   font-weight: 400;
   font-size: 1.5rem;
-  font-style: normal;
   letter-spacing: 0;
   text-transform: none;
   line-height: 1.75rem;
@@ -474,7 +444,6 @@ html {
 .igx-typography .igx-expansion-panel__header-description {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.00625rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -484,28 +453,28 @@ html {
   margin: 0;
 }
 .igx-typography {
-  --financial-chart-title-text-style: normal 300 6rem/7rem inherit;
+  --financial-chart-title-text-style: 300 6rem/7rem inherit;
 }
 .igx-typography {
-  --financial-chart-subtitle-text-style: normal 400 1rem/1.5rem inherit;
+  --financial-chart-subtitle-text-style: 400 1rem/1.5rem inherit;
 }
 .igx-typography {
-  --financial-chart-x-axis-label-text-style: normal 400 2.125rem/2.5rem inherit;
+  --financial-chart-x-axis-label-text-style: 400 2.125rem/2.5rem inherit;
 }
 .igx-typography {
-  --financial-chart-x-axis-title-text-style: normal 400 3rem/3.5625rem inherit;
+  --financial-chart-x-axis-title-text-style: 400 3rem/3.5625rem inherit;
 }
 .igx-typography {
-  --financial-chart-y-axis-label-text-style: normal 400 2.125rem/2.5rem inherit;
+  --financial-chart-y-axis-label-text-style: 400 2.125rem/2.5rem inherit;
 }
 .igx-typography {
-  --financial-chart-y-axis-title-text-style: normal 400 3rem/3.5625rem inherit;
+  --financial-chart-y-axis-title-text-style: 400 3rem/3.5625rem inherit;
 }
 .igx-typography {
-  --funnel-chart-outer-label-text-style: normal 300 6rem/7rem inherit;
+  --funnel-chart-outer-label-text-style: 300 6rem/7rem inherit;
 }
 .igx-typography {
-  --funnel-chart-text-style: normal 400 1rem/1.5rem inherit;
+  --funnel-chart-text-style: 400 1rem/1.5rem inherit;
 }
 .igx-typography {
   --linear-gauge-font: inherit;
@@ -517,7 +486,6 @@ html {
 .igx-typography .igx-input-group__input, .igx-typography .igx-input-group__textarea {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -526,7 +494,6 @@ html {
 .igx-typography .igx-input-group__hint {
   font-weight: 400;
   font-size: 0.75rem;
-  font-style: normal;
   letter-spacing: 0.025rem;
   text-transform: none;
   line-height: 1rem;
@@ -547,7 +514,6 @@ html {
 .igx-input-group--focused .igx-typography [igxSuffix] {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -556,7 +522,6 @@ html {
 .igx-typography .igx-list__header {
   font-weight: 400;
   font-size: 0.625rem;
-  font-style: normal;
   letter-spacing: 0.09375rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -566,7 +531,6 @@ html {
 .igx-typography .igx-list__item-line-title {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -575,7 +539,6 @@ html {
 .igx-typography .igx-list__item-line-subtitle {
   font-weight: 400;
   font-size: 0.75rem;
-  font-style: normal;
   letter-spacing: 0.025rem;
   text-transform: none;
   line-height: 1rem;
@@ -585,7 +548,6 @@ html {
 .igx-typography [igxNavbarTitle], .igx-typography .igx-navbar__title {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -596,7 +558,6 @@ html {
 .igx-typography .igx-nav-drawer__item, .igx-typography .igx-nav-drawer__item--active {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.00625rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -604,7 +565,6 @@ html {
 .igx-typography .igx-nav-drawer__item--header {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -613,7 +573,6 @@ html {
 .igx-typography .igx-radio__label, .igx-typography .igx-radio__label--before {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -621,27 +580,26 @@ html {
   margin-bottom: 0;
 }
 .igx-typography {
-  --shape-chart-title-text-style: normal 600 1.25rem/1.5rem inherit;
+  --shape-chart-title-text-style: 600 1.25rem/1.5rem inherit;
 }
 .igx-typography {
-  --shape-chart-subtitle-text-style: normal 400 1rem/1.5rem inherit;
+  --shape-chart-subtitle-text-style: 400 1rem/1.5rem inherit;
 }
 .igx-typography {
-  --shape-chart-x-axis-title-text-style: normal 400 3rem/3.5625rem inherit;
+  --shape-chart-x-axis-title-text-style: 400 3rem/3.5625rem inherit;
 }
 .igx-typography {
-  --shape-chart-x-axis-label-text-style: normal 400 2.125rem/2.5rem inherit;
+  --shape-chart-x-axis-label-text-style: 400 2.125rem/2.5rem inherit;
 }
 .igx-typography {
-  --shape-chart-y-axis-title-text-style: normal 400 3rem/3.5625rem inherit;
+  --shape-chart-y-axis-title-text-style: 400 3rem/3.5625rem inherit;
 }
 .igx-typography {
-  --shape-chart-y-axis-label-text-style: normal 400 2.125rem/2.5rem inherit;
+  --shape-chart-y-axis-label-text-style: 400 2.125rem/2.5rem inherit;
 }
 .igx-typography .igx-slider__label-from .label, .igx-slider__label-from .igx-typography .label, .igx-typography .igx-slider__label-to .label, .igx-slider__label-to .igx-typography .label {
   font-weight: 400;
   font-size: 0.75rem;
-  font-style: normal;
   letter-spacing: 0.025rem;
   text-transform: none;
   line-height: 1rem;
@@ -649,7 +607,6 @@ html {
 .igx-typography .igx-slider__ticks-label {
   font-weight: 400;
   font-size: 0.75rem;
-  font-style: normal;
   letter-spacing: 0.025rem;
   text-transform: none;
   line-height: 1rem;
@@ -657,7 +614,6 @@ html {
 .igx-typography .igx-snackbar__message {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -665,7 +621,6 @@ html {
 .igx-typography .igx-switch__label, .igx-typography .igx-switch__label--before {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -675,7 +630,6 @@ html {
 .igx-typography .igx-tabs__item-label {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.046875rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -685,7 +639,6 @@ html {
 .igx-typography .igx-time-picker__header-ampm {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -693,7 +646,6 @@ html {
 .igx-typography .igx-time-picker__header-hour {
   font-weight: 400;
   font-size: 2.125rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 2.5rem;
@@ -704,7 +656,6 @@ html {
 .igx-typography .igx-time-picker__column {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.03125rem;
   text-transform: none;
   line-height: 1.75rem;
@@ -716,7 +667,6 @@ html {
 .igx-typography .igx-toast > * {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -725,7 +675,6 @@ html {
 .igx-typography .igx-tooltip--mobile {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -737,7 +686,6 @@ html {
 .igx-typography .igx-typography__h1, .igx-typography h1 {
   font-weight: 300;
   font-size: 6rem;
-  font-style: normal;
   letter-spacing: -0.09375rem;
   text-transform: none;
   line-height: 7rem;
@@ -747,7 +695,6 @@ html {
 .igx-typography .igx-typography__h2, .igx-typography h2 {
   font-weight: 300;
   font-size: 3.75rem;
-  font-style: normal;
   letter-spacing: -0.03125rem;
   text-transform: none;
   line-height: 4.4375rem;
@@ -757,7 +704,6 @@ html {
 .igx-typography .igx-typography__h3, .igx-typography h3 {
   font-weight: 400;
   font-size: 3rem;
-  font-style: normal;
   letter-spacing: 0;
   text-transform: none;
   line-height: 3.5625rem;
@@ -767,7 +713,6 @@ html {
 .igx-typography .igx-typography__h4, .igx-typography h4 {
   font-weight: 400;
   font-size: 2.125rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 2.5rem;
@@ -777,7 +722,6 @@ html {
 .igx-typography .igx-typography__h5, .igx-typography h5 {
   font-weight: 400;
   font-size: 1.5rem;
-  font-style: normal;
   letter-spacing: 0;
   text-transform: none;
   line-height: 1.75rem;
@@ -787,7 +731,6 @@ html {
 .igx-typography .igx-typography__h6, .igx-typography h6 {
   font-weight: 600;
   font-size: 1.25rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -797,7 +740,6 @@ html {
 .igx-typography .igx-typography__subtitle-1 {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.009375rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -805,7 +747,6 @@ html {
 .igx-typography .igx-typography__subtitle-2 {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.00625rem;
   text-transform: none;
   line-height: 1.5rem;
@@ -813,7 +754,6 @@ html {
 .igx-typography .igx-typography__body-1, .igx-typography p {
   font-weight: 400;
   font-size: 1rem;
-  font-style: normal;
   letter-spacing: 0.03125rem;
   text-transform: none;
   line-height: 1.75rem;
@@ -823,7 +763,6 @@ html {
 .igx-typography .igx-typography__body-2 {
   font-weight: 400;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.015625rem;
   text-transform: none;
   line-height: 1.25rem;
@@ -831,7 +770,6 @@ html {
 .igx-typography .igx-typography__button {
   font-weight: 600;
   font-size: 0.875rem;
-  font-style: normal;
   letter-spacing: 0.046875rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -839,7 +777,6 @@ html {
 .igx-typography .igx-typography__caption {
   font-weight: 400;
   font-size: 0.75rem;
-  font-style: normal;
   letter-spacing: 0.025rem;
   text-transform: none;
   line-height: 1rem;
@@ -847,7 +784,6 @@ html {
 .igx-typography .igx-typography__overline {
   font-weight: 400;
   font-size: 0.625rem;
-  font-style: normal;
   letter-spacing: 0.09375rem;
   text-transform: uppercase;
   line-height: 1rem;
@@ -1769,27 +1705,30 @@ igx-nav-drawer {
   background: var(--igx-button-fab-focus-background);
   box-shadow: 0 0 0 0.1875rem var(--igx-button-fab-shadow-color), var(--igx-button-fab-focus-shadow);
 }
-.igx-button--fab * + igx-icon,
-.igx-button--fab igx-icon + *:not(igx-icon) {
-  margin-left: 0.75rem;
+.igx-button--fab igx-icon {
+  display: inline-flex;
+  order: -1;
+  margin: 0.5rem 0;
+}
+.igx-button--fab * + igx-icon {
+  margin: 0;
+  margin-right: 0.75rem;
 }
 .igx-button--fab-cosy.igx-button--fab {
   padding: 0.25rem 0.75rem;
   min-width: 2.5rem;
   min-height: 2.5rem;
 }
-.igx-button--fab-cosy.igx-button--fab * + igx-icon,
-.igx-button--fab-cosy.igx-button--fab igx-icon + *:not(igx-icon) {
-  margin-left: 0.5rem;
+.igx-button--fab-cosy.igx-button--fab * + igx-icon {
+  margin-right: 0.5rem;
 }
 .igx-button--fab-compact.igx-button--fab {
   padding: 0 0.5rem;
   min-width: 2rem;
   min-height: 2rem;
 }
-.igx-button--fab-compact.igx-button--fab * + igx-icon,
-.igx-button--fab-compact.igx-button--fab igx-icon + *:not(igx-icon) {
-  margin-left: 0.25rem;
+.igx-button--fab-compact.igx-button--fab * + igx-icon {
+  margin-right: 0.25rem;
 }
 .igx-button--icon {
   width: 2.25rem;
@@ -3712,8 +3651,8 @@ igx-nav-drawer {
   outline-style: none;
 }
 .igx-column-actions__columns-item {
-  padding: 0.25rem 1rem;
-  min-height: 2rem;
+  padding: 1rem;
+  min-height: 3.25rem;
 }
 .igx-column-actions__buttons {
   display: flex;
@@ -4051,7 +3990,6 @@ igx-date-range-end,
 .igx-drop-down__list-scroll {
   overflow-y: auto;
   overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
   position: relative;
 }
 .igx-drop-down__list-scroll igx-input-group {
@@ -4284,9 +4222,6 @@ igx-date-range-end,
   background: var(--igx-expansion-panel-body-background);
   overflow: hidden;
 }
-.igx-expansion-panel--disabled {
-  pointer-events: none;
-}
 .igx-expansion-panel--disabled .igx-expansion-panel__header-title,
 .igx-expansion-panel--disabled .igx-expansion-panel__header-description {
   color: var(--igx-expansion-panel-disabled-color);
@@ -4438,10 +4373,6 @@ igx-date-range-end,
 .igx-grid__tfoot .igx-grid__tr:hover {
   background: inherit;
   color: inherit;
-}
-.igx-grid__thead-wrapper > [aria-activedescendant],
-.igx-grid__tfoot > [aria-activedescendant] {
-  outline-style: none;
 }
 .igx-grid__thead-wrapper {
   border-bottom: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
@@ -4783,7 +4714,6 @@ thead item and group.
 }
 .igx-grid__tr--inner {
   display: flex;
-  background: inherit;
 }
 .igx-grid__tr--add-animate {
   animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -4938,9 +4868,7 @@ thead item and group.
   padding: 0 !important;
 }
 .igx-grid__td--editing igx-input-group,
-.igx-grid__td--editing igx-select,
-.igx-grid__td--editing igx-date-picker,
-.igx-grid__td--editing igx-time-picker {
+.igx-grid__td--editing igx-select {
   width: 100%;
   height: 100%;
 }
@@ -4948,11 +4876,10 @@ thead item and group.
   --igx-input-group-variant: fluent;
   padding-top: 0 !important;
 }
+.igx-grid__td--editing igx-date-picker,
+.igx-grid__td--editing igx-time-picker,
 .igx-grid__td--editing igx-date-range-picker {
   height: 100%;
-}
-.igx-grid__td--editing igx-time-picker [igxLabel] {
-  display: none;
 }
 .igx-grid__td--editing .igx-input-group__bundle {
   height: 100%;
@@ -5216,7 +5143,6 @@ thead item and group.
   display: flex;
   overflow: hidden;
   background: var(--igx-grid-root-summaries-background);
-  outline-style: none;
 }
 .igx-grid__summaries .igx-grid-summary__result, .igx-grid__summaries--body .igx-grid-summary__result {
   color: var(--igx-grid-root-summaries-text-color);
@@ -8472,7 +8398,7 @@ igx-excel-style-filter-operations,
   --igx-list-border-color: transparent;
   --igx-list-border-width: 0;
 }
-.igx-list, .igx-list--empty, .igx-list--compact, .igx-list--cosy {
+.igx-list, .igx-list__empty, .igx-list--compact, .igx-list--cosy {
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -8482,15 +8408,25 @@ igx-excel-style-filter-operations,
   z-index: 0;
   border-radius: var(--igx-list-border-radius);
 }
-.igx-list--empty {
+.igx-list__empty, .igx-list__empty--custom {
   justify-content: center;
   align-items: center;
 }
-.igx-list--empty .igx-list__message {
+.image {
+  width: auto;
+  max-height: 120px;
+}
+.message {
   text-align: center;
   color: var(--igx-list-item-text-color);
   padding: 1rem;
   z-index: 1;
+}
+.message {
+  padding: 0.5rem;
+}
+.message {
+  padding: 0.25rem;
 }
 .igx-list__header {
   display: flex;
@@ -8532,13 +8468,13 @@ igx-excel-style-filter-operations,
 .igx-list__item-base:hover .igx-list__item-actions {
   color: var(--igx-list-item-action-color-hover);
 }
-.igx-list__item-base:hover .igx-list__item-actions igx-icon {
+.igx-list__item-base:hover .igx-list__item-actions .igx-icon, .igx-list__item-base:hover .igx-list__item-actions .igx-icon--inactive, .igx-list__item-base:hover .igx-list__item-actions .igx-icon--success, .igx-list__item-base:hover .igx-list__item-actions .igx-icon--error {
   color: var(--igx-list-item-action-color-hover);
 }
 .igx-list__item-base:hover .igx-list__item-thumbnail {
   color: var(--igx-list-item-thumbnail-color-hover);
 }
-.igx-list__item-base:hover .igx-list__item-thumbnail igx-icon {
+.igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon, .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--inactive, .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--success, .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--error {
   color: var(--igx-list-item-thumbnail-color-hover);
 }
 .igx-list__item-right, .igx-list__item-left {
@@ -8575,7 +8511,7 @@ igx-excel-style-filter-operations,
 .igx-list__item-actions:empty {
   display: none;
 }
-.igx-list__item-actions igx-icon {
+.igx-list__item-actions .igx-icon, .igx-list__item-actions .igx-icon--inactive, .igx-list__item-actions .igx-icon--success, .igx-list__item-actions .igx-icon--error {
   color: var(--igx-list-item-action-color);
 }
 .igx-list__item-content, .igx-list__item-content:active {
@@ -8601,10 +8537,10 @@ igx-excel-style-filter-operations,
   padding: 0;
   color: var(--igx-list-item-thumbnail-color);
 }
-.igx-list__item-thumbnail > igx-icon {
+.igx-list__item-thumbnail > .igx-icon, .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list__item-thumbnail > .igx-icon--success, .igx-list__item-thumbnail > .igx-icon--error {
   margin: 0.5rem 1rem 0.5rem 0;
 }
-.igx-list__item-thumbnail > igx-avatar > igx-icon {
+.igx-list__item-thumbnail > .igx-avatar > .igx-icon, .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon, .igx-list__item-thumbnail > .igx-avatar > .igx-icon--inactive, .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--inactive, .igx-list__item-thumbnail > .igx-avatar > .igx-icon--success, .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--success, .igx-list__item-thumbnail > .igx-avatar > .igx-icon--error, .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--error {
   margin: 0;
 }
 .igx-list__item-thumbnail:empty {
@@ -8619,10 +8555,10 @@ igx-excel-style-filter-operations,
 .igx-list--compact .igx-list__item-thumbnail:not(:empty) + .igx-list__item-lines {
   margin: 0 0 0 0.5rem;
 }
-.igx-list--cosy .igx-list__item-thumbnail > igx-icon {
+.igx-list--cosy .igx-list__item-thumbnail > .igx-icon, .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--success, .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--error {
   margin: 0.375rem 0.5rem 0.375rem 0;
 }
-.igx-list--compact .igx-list__item-thumbnail > igx-icon {
+.igx-list--compact .igx-list__item-thumbnail > .igx-icon, .igx-list--compact .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--compact .igx-list__item-thumbnail > .igx-icon--success, .igx-list--compact .igx-list__item-thumbnail > .igx-icon--error {
   margin: 0.25rem 0.25rem 0.25rem 0;
 }
 .igx-list--cosy .igx-list__item-actions > * {
@@ -8648,13 +8584,13 @@ igx-excel-style-filter-operations,
 .igx-list__item-content:active .igx-list__item-actions {
   color: var(--igx-list-item-action-color-active);
 }
-.igx-list__item-content:active .igx-list__item-actions igx-icon {
+.igx-list__item-content:active .igx-list__item-actions .igx-icon, .igx-list__item-content:active .igx-list__item-actions .igx-icon--inactive, .igx-list__item-content:active .igx-list__item-actions .igx-icon--success, .igx-list__item-content:active .igx-list__item-actions .igx-icon--error {
   color: var(--igx-list-item-action-color-active);
 }
 .igx-list__item-content:active .igx-list__item-thumbnail {
   color: var(--igx-list-item-thumbnail-color-active);
 }
-.igx-list__item-content:active .igx-list__item-thumbnail igx-icon {
+.igx-list__item-content:active .igx-list__item-thumbnail .igx-icon, .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--inactive, .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--success, .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--error {
   color: var(--igx-list-item-thumbnail-color-active);
 }
 .igx-list__item-content:not(:active) {
@@ -9408,12 +9344,6 @@ igx-navbar-title,
 }
 .igx-scrollbar ::-webkit-scrollbar-thumb {
   background: var(--igx-scrollbar-thumb-background);
-}
-@media (hover: none) {
-  .igx-scrollbar ::-webkit-scrollbar {
-    width: auto;
-    height: auto;
-  }
 }
 :root {
   --igx-slider-variant: material;
