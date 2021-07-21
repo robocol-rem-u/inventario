@@ -2344,7 +2344,9 @@
             fd.append("cantidadEnUso", cantidadEnUso);
             fd.append("cantidadEnArreglo", cantidadEnArreglo);
             fd.append("image", image);
-            return this.httpClient.post(this.URL_API, fd);
+            return this.httpClient.post(this.URL_API, fd, {
+              responseType: 'text'
+            });
           }
         }, {
           key: "getProductoPorId",

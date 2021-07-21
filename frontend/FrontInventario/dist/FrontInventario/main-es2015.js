@@ -1166,7 +1166,7 @@ class ProductoService {
         fd.append("cantidadEnUso", cantidadEnUso);
         fd.append("cantidadEnArreglo", cantidadEnArreglo);
         fd.append("image", image);
-        return this.httpClient.post(this.URL_API, fd);
+        return this.httpClient.post(this.URL_API, fd, { responseType: 'text' });
     }
     getProductoPorId(idProducto) {
         return this.httpClient.get(this.URL_API + "/" + idProducto);
