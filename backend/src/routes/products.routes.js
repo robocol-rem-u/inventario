@@ -22,6 +22,8 @@ router.delete("/:id", productsCtrl.deleteProducto)
 router.delete("/", productsCtrl.deleteProductos)
 router.get("/:id", productsCtrl.getProducto)
 router.put("/mover/:id", productsCtrl.moverProducto)
+router.put("/agregar/:id", productsCtrl.agregarUnidadesProducto)
+router.put("/eliminar/:id", productsCtrl.botarUnidadesProducto)
 
 //Este objeto es el que voy a usar, entonces lo exporto
 module.exports = router

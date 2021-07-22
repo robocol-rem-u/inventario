@@ -19,6 +19,8 @@ import { IngresoUsuarioModule } from './modules/ingreso-usuario/ingreso-usuario.
 import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuario.component';
 //Historial
 import { HistorialComponent } from './modules/historial/historial.component';
+import { HistorialModule } from './modules/historial/historial.module';
+
 import { UsuarioGuard } from './guard/usuario.guard';
 import { UsuarioGuardLogged } from './guard/usuarioLogged.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,7 +28,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CatalogoModule } from './modules/catalogo/catalogo.module';
 import { CatalogoComponent } from './modules/catalogo/catalogo.component';
 import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/disponibilidad.component';
+//prestamo
 import { PrestamoComponent } from './modules/prestamo/prestamo/prestamo.component';
+import { PrestamoModule } from './modules/prestamo/prestamo/prestamo.module';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -51,7 +56,9 @@ import { PrestamoComponent } from './modules/prestamo/prestamo/prestamo.componen
     Menu_opcionesModule,
     IngresoUsuarioModule,
     CatalogoModule,
-    NgbModule
+    NgbModule,
+    HistorialModule,
+    PrestamoModule
   ],
   providers: [UsuarioGuard],
   bootstrap: [AppComponent],

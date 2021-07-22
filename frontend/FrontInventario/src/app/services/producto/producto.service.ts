@@ -55,4 +55,20 @@ export class ProductoService {
       })
     )
   }
+  agregarUnidadProductoId(idProducto: string, agregar:String, cantidad: String):Observable<Producto>{
+    return this.httpClient.put<Producto>(this.URL_API+"/agregar/"+idProducto,{"agregar":agregar,"cantidad":cantidad} ).pipe(
+      catchError(err =>{
+        console.log(err.error)
+        return throwError(err);
+      })
+    )
+  }
+  botarCantidadProductoId(idProducto: string, eliminar:String, cantidad: String):Observable<Producto>{
+    return this.httpClient.put<Producto>(this.URL_API+"/eliminar/"+idProducto,{"eliminar":eliminar,"cantidad":cantidad} ).pipe(
+      catchError(err =>{
+        console.log(err.error)
+        return throwError(err);
+      })
+    )
+  }
 }

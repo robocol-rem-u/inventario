@@ -49,34 +49,84 @@ export class DisponibilidadComponent implements OnInit {
   mover(desde:HTMLSelectElement, hasta:HTMLSelectElement, cantidad:HTMLInputElement){
 
     console.log("move")
-    this.toastr.info("Estamos agregando tu producto al catálogo","Un momento", {
+    this.toastr.info("Estamos procesando tu solicitud","Un momento", {
       timeOut: 0,
     });
       this.productoService.moverProductoId(this.id_producto,desde.value, hasta.value, cantidad.value ).subscribe(res => {
         this.producto = res;
         this.toastr.clear();
         console.log(res);
-        this.toastr.success("El producto fue agregado al catálogo", "¡Listo!", {
+        this.toastr.success("El producto fue movido correctamente", "¡Listo!", {
           timeOut: 0
         });
         setTimeout(() =>
           {
             window.location.reload();
-          }, 3000);
+          }, 5000);
       },
       error => {
         this.toastr.clear();
-        console.log(error);
-        this.toastr.error(error.message,"¡Ups!", );
+        console.error(error);
+        this.toastr.error(error.message ,"¡Ups!", );
+        return false;
+
       }
     );
   }
 
-  agregar(){
+  agregar( agregar:HTMLSelectElement, cantidad:HTMLInputElement, event){
+    event.preventDefault();
     console.log("agregar")
+    this.toastr.info("Estamos procesando tu solicitud","Un momento", {
+      timeOut: 0,
+    });
+    event.preventDefault();
+    //   this.productoService.agregarUnidadProductoId(this.id_producto,agregar.value, cantidad.value ).subscribe(res => {
+    //     this.producto = res;
+    //     this.toastr.clear();
+    //     console.log(res);
+    //     this.toastr.success("El producto fue movido correctamente", "¡Listo!", {
+    //       timeOut: 0
+    //     });
+    //     setTimeout(() =>
+    //       {
+    //         window.location.reload();
+    //       }, 5000);
+    //   },
+    //   error => {
+    //     this.toastr.clear();
+    //     console.error(error);
+    //     this.toastr.error(error.message ,"¡Ups!", );
+    //     return false;
+
+    //   }
+    // );
   }
-  retirar(){
+  retirar(eliminar:HTMLSelectElement, cantidad:HTMLInputElement){
     console.log("retirar")
+    this.toastr.info("Estamos procesando tu solicitud","Un momento", {
+      timeOut: 0,
+    });
+      this.productoService.botarCantidadProductoId(this.id_producto,eliminar.value, cantidad.value ).subscribe(res => {
+        this.producto = res;
+        this.toastr.clear();
+        console.log(res);
+        this.toastr.success("las unidades se eliminaron correctamente", "¡Listo!", {
+          timeOut: 0
+        });
+        setTimeout(() =>
+          {
+            window.location.reload();
+          }, 5000);
+      },
+      error => {
+        this.toastr.clear();
+        console.error(error);
+        this.toastr.error(error.message ,"¡Ups!", );
+        return false;
+
+      }
+    );
   }
 //   btnClick = function () {
 //     console.log("ASDadsfgaega")

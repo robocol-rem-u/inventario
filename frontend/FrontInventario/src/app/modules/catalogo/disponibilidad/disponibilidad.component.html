@@ -67,14 +67,13 @@
 </form>
 <br>
 <hr>
+<form (submit1)="agregar (agregar, CantidadAgregar )">
 
   <div class="row">
     <div class="col-50">
       <label class="color">Agregar a</label>
       <br>
-      <select id="familia" name="Desde">
-        <option value="Disp.uso">Disponible para utilizar</option>
-        <option value="Disp.arreglo">Disponible para arreglar</option>
+      <select id="agregar" name="agregar" required #agregar>
         <option value="Disponible para utilizar">Disponible para utilizar</option>
         <option value="Disponible para arreglar">Disponible para arreglar</option>
         </select>
@@ -83,24 +82,26 @@
     <div class="col-20 ">
       <label class="color">Cantidad</label>
       <br>
-      <input type="number" id="tentacles" name="tentacles"
+      <input type="number" id="CantidadAgregar" name="CantidadAgregar" required #CantidadAgregar
        min="1" max="1000">
     </div>
     <div class="col-50">
       <br>
       <br>
-      <button type="button" class="btn btn-success botonAgregar" (click)="agregar()">Agregar nueva cantidad</button>
+      <button type="submit1" class="btn btn-success botonAgregar" >Agregar nueva cantidad</button>
 
       <br>
         </div>
   </div>
+</form>
   <br>
 <hr>
+<form (submit2)="  retirar(retirar, CantidadEliminar )">
 <div class="row">
   <div class="col-50">
     <label class="color">Eliminar desde</label>
     <br>
-    <select id="familia" name="Desde">
+    <select id="retirar" name="retirar" required #retirar>
       <option value="Disponible para utilizar">Disponible para utilizar</option>
       <option value="Disponible para arreglar">Disponible para arreglar</option>
       <option value="En uso">En uso</option>
@@ -111,17 +112,19 @@
   <div class="col-20 ">
     <label class="color">Cantidad</label>
     <br>
-    <input type="number" id="tentacles" name="tentacles"
+    <input type="number" id="CantidadEliminar" name="CantidadEliminar" required #CantidadEliminar
      min="1" max="1000">
   </div>
   <div class="col-50">
     <br>
     <br>
-    <button type="button" class="btn btn-danger botonAgregar" (click)="retirar()">Retirar/Botar cantidad</button>
-
+    <button type="submit2" class="btn btn-danger botonAgregar" (click)="retirar()">Retirar/Botar cantidad</button>
     <br>
       </div>
+
 </div>
+</form>
+
 <br>
 <hr>
 

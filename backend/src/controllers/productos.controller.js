@@ -28,6 +28,7 @@ productosCtrl.moverProducto= async(req, res)=>{
         hasta: req.body.hasta,
         cantidad: req.body.cantidad
     }
+    datos.cantidad= parseInt(datos.cantidad)
     if(datos.desde==datos.hasta){
         res.status(409).send({ message: 'No se puede realizar el cambio.' });
     }
@@ -35,7 +36,7 @@ productosCtrl.moverProducto= async(req, res)=>{
         res.status(409).send({ message: 'La cantidad debe ser mayor a cero' }); 
     }
     else if (datos.desde==DISPONIBLEUTILIZAR && datos.hasta==ENARREGLO){
-        res.status(409).send({ message: 'No puede mover desde disponbiles para uso hasta en arreglo, estas unidades deberian estar en disponible para arreglo' }); 
+        res.status(409).json({ message: 'No puede mover desde disponbiles para uso hasta en arreglo, estas unidades deberian estar en disponible para arreglo' }); 
     }
     //como ya todos los errores por input se revisaron, se hace el update
     else{
@@ -43,7 +44,6 @@ productosCtrl.moverProducto= async(req, res)=>{
         //Esto se hace para que los productos de Desde y hasta concuerden con los atributos del producto
         datos.desde= cambiarDesde(datos.desde);
         datos.hasta=cambiarDesde(datos.hasta);
-        datos.cantidad= parseInt(datos.cantidad)
 
         if(producto[datos.desde]-datos.cantidad>=0 )
         {
@@ -76,6 +76,62 @@ function cambiarDesde(desde){
     }
     else
         return "cantidadEnUso"
+}
+
+productosCtrl.agregarUnidadesProducto= async(req, res)=>{
+    const datos = {
+        id:req.params.id,
+        agregar: req.body.agregar,
+        cantidad: req.body.cantidad
+    }
+    datos.cantidad= parseInt(datos.cantidad)
+    if (datos.cantidad<1){
+        res.status(409).send({ message: 'La cantidad debe ser mayor a cero' }); 
+    }
+    //como ya todos los errores por input se revisaron, se hace el update
+    else{
+        const producto =await Producto.findById(datos.id);
+        //Esto se hace para que los productos de Desde y hasta concuerden con los atributos del producto
+        datos.agregar= cambiarDesde(datos.agregar);
+
+          //no hay error, se hace el update 
+            console.log("antes", producto);
+            producto[datos.agregar]=producto[datos.agregar]+datos.cantidad;
+            await Producto.findByIdAndUpdate(req.params.id, producto)
+            console.log("despues", producto, "se agregaron las unidades");  
+    }
+
+}
+productosCtrl.botarUnidadesProducto= async(req, res)=>{
+    console.log("entroooo a botar")
+    const datos = {
+        id:req.params.id,
+        eliminar: req.body.eliminar,
+        cantidad: req.body.cantidad
+    }
+    datos.cantidad= parseInt(datos.cantidad)
+    if (datos.cantidad<1){
+        res.status(409).send({ message: 'La cantidad debe ser mayor a cero' }); 
+    }
+    //como ya todos los errores por input se revisaron, se hace el update
+    else{
+        const producto =await Producto.findById(datos.id);
+        //Esto se hace para que los productos de Desde y hasta concuerden con los atributos del producto
+        datos.eliminar= cambiarDesde(datos.eliminar);
+        if(producto[datos.eliminar]-datos.cantidad>=0 )
+        {
+          //no hay error, se hace el update 
+            console.log("antes", producto);
+            producto[datos.eliminar]=producto[datos.eliminar]-datos.cantidad;
+            await Producto.findByIdAndUpdate(req.params.id, producto)
+            console.log("despues", producto, "se eliminaron las unidades"); 
+        }
+        else{
+            res.status(409).send({ message: 'No es posible mover todas esas cantidades' }); 
+   
+        } 
+    }
+
 }
 
 

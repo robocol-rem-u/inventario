@@ -54,8 +54,28 @@ Content-Type: application/json
 {      
      "id":"60ef71d56e45c11a8c6f126e",
         "desde": "Disponible para arreglar",
-        "hasta": "Disponible para utilizar",
+        "hasta": "En arreglo",
         "cantidad": "15"
+}
+
+####
+PUT http://localhost:5000/api/productos/agregar/60f7a58b0d965a6ce4372fee
+Content-Type: application/json
+
+{      
+     "id":"60ef71d56e45c11a8c6f126e",
+        "agregar": "Disponible para arreglar",
+        "cantidad": "2"
+}
+###
+
+PUT http://localhost:5000/api/productos/eliminar/60f7a58b0d965a6ce4372fee
+Content-Type: application/json
+
+{      
+     "id":"60ef71d56e45c11a8c6f126e",
+        "eliminar": "Disponible para arreglar",
+        "cantidad": "2"
 }
 
 ###
