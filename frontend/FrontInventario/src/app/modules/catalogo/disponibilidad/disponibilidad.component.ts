@@ -74,33 +74,31 @@ export class DisponibilidadComponent implements OnInit {
     );
   }
 
-  agregar( agregar:HTMLSelectElement, cantidad:HTMLInputElement, event){
-    event.preventDefault();
+  agregar( agregar:HTMLSelectElement, cantidad:HTMLInputElement){
     console.log("agregar")
     this.toastr.info("Estamos procesando tu solicitud","Un momento", {
       timeOut: 0,
     });
-    event.preventDefault();
-    //   this.productoService.agregarUnidadProductoId(this.id_producto,agregar.value, cantidad.value ).subscribe(res => {
-    //     this.producto = res;
-    //     this.toastr.clear();
-    //     console.log(res);
-    //     this.toastr.success("El producto fue movido correctamente", "¡Listo!", {
-    //       timeOut: 0
-    //     });
-    //     setTimeout(() =>
-    //       {
-    //         window.location.reload();
-    //       }, 5000);
-    //   },
-    //   error => {
-    //     this.toastr.clear();
-    //     console.error(error);
-    //     this.toastr.error(error.message ,"¡Ups!", );
-    //     return false;
+      this.productoService.agregarUnidadProductoId(this.id_producto,agregar.value, cantidad.value ).subscribe(res => {
+        this.producto = res;
+        this.toastr.clear();
+        console.log(res);
+        this.toastr.success("El producto fue movido correctamente", "¡Listo!", {
+          timeOut: 0
+        });
+        setTimeout(() =>
+          {
+            window.location.reload();
+          }, 5000);
+      },
+      error => {
+        this.toastr.clear();
+        console.error(error);
+        this.toastr.error(error.message ,"¡Ups!", );
+        return false;
 
-    //   }
-    // );
+      }
+    );
   }
   retirar(eliminar:HTMLSelectElement, cantidad:HTMLInputElement){
     console.log("retirar")

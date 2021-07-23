@@ -55,7 +55,7 @@
       <select id="Hasta" name="Hasta" required #Hasta>
         <option value="Disponible para utilizar">Disponible para utilizar</option>
         <option value="Disponible para arreglar">Disponible para arreglar</option>
-        <option value="En uso">En uso</option>
+        <option value="En uso" selected >En uso</option>
         <option value="En arreglo">En arreglo</option>
         </select>
     </div>
@@ -67,13 +67,13 @@
 </form>
 <br>
 <hr>
-<form (submit1)="agregar (agregar, CantidadAgregar )">
+<form (submit)="agregar ( agrega, cantidadAgregar )">
 
   <div class="row">
     <div class="col-50">
       <label class="color">Agregar a</label>
       <br>
-      <select id="agregar" name="agregar" required #agregar>
+      <select id="agregar" name="agregar" required #agrega >
         <option value="Disponible para utilizar">Disponible para utilizar</option>
         <option value="Disponible para arreglar">Disponible para arreglar</option>
         </select>
@@ -82,13 +82,13 @@
     <div class="col-20 ">
       <label class="color">Cantidad</label>
       <br>
-      <input type="number" id="CantidadAgregar" name="CantidadAgregar" required #CantidadAgregar
+      <input type="number" id="CantidadAgregar" name="CantidadAgregar" required #cantidadAgregar
        min="1" max="1000">
     </div>
     <div class="col-50">
       <br>
       <br>
-      <button type="submit1" class="btn btn-success botonAgregar" >Agregar nueva cantidad</button>
+      <button type="submit" class="btn btn-success botonAgregar" >Agregar nueva cantidad</button>
 
       <br>
         </div>
@@ -96,12 +96,12 @@
 </form>
   <br>
 <hr>
-<form (submit2)="  retirar(retirar, CantidadEliminar )">
+<form (submit)="  retirar(retiro, CantidadEliminar )">
 <div class="row">
   <div class="col-50">
     <label class="color">Eliminar desde</label>
     <br>
-    <select id="retirar" name="retirar" required #retirar>
+    <select id="retirar" name="retirar" required #retiro>
       <option value="Disponible para utilizar">Disponible para utilizar</option>
       <option value="Disponible para arreglar">Disponible para arreglar</option>
       <option value="En uso">En uso</option>
@@ -118,7 +118,7 @@
   <div class="col-50">
     <br>
     <br>
-    <button type="submit2" class="btn btn-danger botonAgregar" (click)="retirar()">Retirar/Botar cantidad</button>
+    <button type="submit" class="btn btn-danger botonAgregar">Retirar/Botar cantidad</button>
     <br>
       </div>
 
