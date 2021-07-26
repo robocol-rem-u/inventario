@@ -15,15 +15,12 @@ export class UsuarioGuard implements CanActivate {
     console.log(this.userService.loggedIn())
  //return true;
     if (this.userService.loggedIn()) {
-      console.log("todo bien")
-     // this.router.navigate(['/menu'])
       return true;
     }
 //cuando ingresa
-else{
-    this.router.navigate(['/ingreso-usuario']);
-    console.log("todo mal :c")
-    return false;
+    else{
+      this.router.navigate(['/robocol/ingreso-usuario']);
+      return false;
   }
  }
 }

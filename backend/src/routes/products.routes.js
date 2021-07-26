@@ -2,9 +2,6 @@
 //El enrutador es un objeto que nos permite guardar urls
 const {Router} = require("express")
 
-//const upload = require("../../libs/storage");
-const storageS3 = require("../../libs/storageS3");
-
 const productsCtrl = require("../controllers/productos.controller")
 
 //Necesito mínimo 4 rutas para cada clase, CRUD
@@ -17,13 +14,13 @@ const router = Router()
 
 // api/products
 router.get("/", productsCtrl.getProductos)
-//Con upload.single("image") estamos diciendo que antes de crear el producto en la base de datos, guarde la imagen que viene con el nombre image en el servidor
-router.post("/", storageS3.upload, productsCtrl.createProducto)
+router.post("/", productsCtrl.createProducto)
 
 // api/products/:id
 router.put("/:id", productsCtrl.updateProducto)
 router.delete("/:id", productsCtrl.deleteProducto)
 router.delete("/", productsCtrl.deleteProductos)
+router.get("/:id", productsCtrl.getProducto)
 
 //Este objeto es el que voy a usar, entonces lo exporto
 module.exports = router

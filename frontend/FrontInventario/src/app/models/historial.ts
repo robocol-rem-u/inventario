@@ -2,21 +2,20 @@ export class Historial {
   cantidad: number;
   tipoMovimiento: String;
   responsable: String;
-  // fecha: Date;
-  idProducto: number;
+  id_Producto: number;
   createdAt: Date
 
   constructor(
     cantidad: number,
     tipoMovimiento: String,
     responsable: String,
-    idProducto: number,
+    id_Producto: number,
     createdAt: Date
   ) {
     this.cantidad = cantidad;
     this.tipoMovimiento = tipoMovimiento;
     this.responsable = responsable;
-    this.idProducto = idProducto;
+    this.id_Producto = id_Producto;
     this.createdAt=createdAt
   }
 }

@@ -5,20 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
+import { ToastrModule } from 'ngx-toastr';
 // Igx
 import { IgxListModule } from 'igniteui-angular';
 // Registro de Producto
 import { RegistroProductoModule } from './modules/registro-producto/registro-producto.module';
 import { RegistroProductoPrincipalComponent } from './modules/registro-producto/registro-producto-principal/registro-producto-principal.component';
-// Mensajes
-import { MensajesModule } from './modules/mensajes/mensajes.module';
-import { MensajesPrincipalComponent } from './modules/mensajes/mensajes-principal/mensajes-principal.component';
-// Plan de compra
-import { PlanCompraModule } from './modules/planCompra/planCompra.module';
-import { PlanCompraPrincipalComponent } from './modules/planCompra/planCompra-principal/planCompra-principal.component';
-import { PlanCompraNuevoComponent } from './modules/planCompra/planCompra-nuevo/planCompra-nuevo.component';
-import { PlanCompraFormularioComponent } from './modules/planCompra/planCompra-formulario/planCompra-formulario.component';
-import { PlanCompraProductosComponent } from './modules/planCompra/planCompra-productos/planCompra-productos.component';
 //menu de opciones
 import { Menu_opcionesModule } from './modules/menu_opciones/menu_opciones.module';
 import { Menu_opcionesComponent } from './modules/menu_opciones/menu_opciones.component';
@@ -28,45 +20,37 @@ import { IngresoUsuarioComponent } from './modules/ingreso-usuario/ingreso-usuar
 //Historial
 import { HistorialComponent } from './modules/historial/historial.component';
 import { UsuarioGuard } from './guard/usuario.guard';
-//Catalogo
-import { CatalogoComponent } from './modules/catalogo/catalogo.component';
-import { CatalogoModule } from './modules/catalogo/catalogo.module';
+import { UsuarioGuardLogged } from './guard/usuarioLogged.guard';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//Catalogo
+import { CatalogoModule } from './modules/catalogo/catalogo.module';
+import { CatalogoComponent } from './modules/catalogo/catalogo.component';
+import { DisponibilidadComponent } from './modules/catalogo/disponibilidad/disponibilidad.component';
+import { PrestamoComponent } from './modules/prestamo/prestamo/prestamo.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    ToastrModule.forRoot(),
     BrowserModule,
     RegistroProductoModule,
-    MensajesModule,
-    PlanCompraModule,
-    CatalogoModule,
     HttpClientModule,
-    RouterModule.forRoot([ /**/
-      { path: 'registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
-      { path: 'mensajes', component: MensajesPrincipalComponent, canActivate:[UsuarioGuard] },
-      { path: 'planCompra', component: PlanCompraPrincipalComponent, canActivate:[UsuarioGuard] },
-      { path: 'planCompraNuevo', component: PlanCompraNuevoComponent, canActivate:[UsuarioGuard] },
-      { path: 'planCompraEstado', component: PlanCompraFormularioComponent, canActivate:[UsuarioGuard] },
-      { path: 'menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
-      { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
-      { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
-      { path: 'historial', component: HistorialComponent, canActivate:[UsuarioGuard]},
-      { path: 'catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
-      /*
-      { path: 'registroProducto', component: RegistroProductoPrincipalComponent },
-      { path: 'planCompra', component: PlanCompraPrincipalComponent },
-      { path: 'menu', component: Menu_opcionesComponent },
-      { path: 'catalogo', component: CatalogoComponent },
-      { path: 'ingreso-usuario', component: IngresoUsuarioComponent},
-      { path: '', pathMatch:'full', redirectTo: 'ingreso-usuario'},
-      { path: 'historial', component: HistorialComponent}*/
+    RouterModule.forRoot([
+      { path: 'robocol/registroProducto', component: RegistroProductoPrincipalComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/menu', component: Menu_opcionesComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/ingreso-usuario', component: IngresoUsuarioComponent, canActivate: [UsuarioGuardLogged]},
+      { path: 'robocol/historial/:id', component: HistorialComponent, canActivate:[UsuarioGuard]},
+      { path: 'robocol/catalogo', component: CatalogoComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/disponibilidad/:id', component: DisponibilidadComponent, canActivate:[UsuarioGuard] },
+      { path: 'robocol/prestamos/:id', component: PrestamoComponent, canActivate:[UsuarioGuard] },
+      {path:'', redirectTo:'robocol/ingreso-usuario', pathMatch: 'full' },
     ]),
     BrowserAnimationsModule,
     FormsModule,
     IgxListModule,
     Menu_opcionesModule,
     IngresoUsuarioModule,
+    CatalogoModule,
     NgbModule
   ],
   providers: [UsuarioGuard],

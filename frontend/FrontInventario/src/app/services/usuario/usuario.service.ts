@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Usuario } from '../../models/usuario';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JwtResponseUser } from 'src/app/models/JwtResponseUser';
 import { tap } from 'rxjs/operators';
@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class UsuarioService {
 
 private apiUrl = environment.baseUrl + 'usuario'
-//URL_API= "http://localhost:4000/api/usuario"
 authSubject = new BehaviorSubject(false);
 private token: string;
 
@@ -50,7 +49,7 @@ logout(): void {
   this.token = '';
   localStorage.removeItem("ACCESS_TOKEN");
   localStorage.removeItem("EXPIRES_IN");
-  this.router.navigate(['/ingreso-usuario'])
+  this.router.navigate(['/robocol/ingreso-usuario'])
 }
 
 private saveToken(token: string, expiresIn: string): void {

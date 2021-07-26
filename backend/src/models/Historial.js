@@ -5,7 +5,8 @@ const historialSchema = new Schema(
         cantidad: {type: Number, required: true, trim:true},
         tipoMovimiento: {type: String, required: true, trim:true},
         responsable: {type: String, required: true, trim: true}, 
-        fecha: {type: Date, required: true}
+        fecha: {type: Date, required: true},
+        id_producto:{type:String, required: true, trim: true}
     },
     {
         timestamps: true,

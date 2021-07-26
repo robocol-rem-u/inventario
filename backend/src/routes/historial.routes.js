@@ -19,6 +19,7 @@ router.post("/", historialCtrl.createHistorial)
 // api/products/:id
 router.put("/:id", historialCtrl.updateHistorial)
 router.delete("/:id", historialCtrl.deleteHistorial)
+router.get("/:id", historialCtrl.getHistorialSegunProducto)
 
 
 //Este objeto es el que voy a usar, entonces lo exporto
