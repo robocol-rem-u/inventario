@@ -19,8 +19,8 @@ app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/Front
 app.get('/robocol/*', function(req, res) {
   res.sendFile(path.join(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario/index.html'));
 });
-app.use(express.static('build'));
 
+app.use(express.static('build'));
 //ATRIBUTOS
 //Le damos el valor del puerto como una variable
 //Si puede usar el puerto de la variable de entorno lo usa, si no, usa el 4000

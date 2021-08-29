@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpErrorResponse } from '@angular/common/http'
 import {Producto} from '../../models/producto';
 import { Historial } from "../../models/historial";
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 import { Prestamo } from 'src/app/models/prestamo';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -45,5 +46,13 @@ export class ProductoService {
   deleteProductoId(idProducto: string):Observable<Producto>{
     return this.httpClient.delete<Producto>(this.URL_API+"/"+idProducto);
 
+  }
+  moverProductoId(idProducto: string, desde:String, hasta:String, cantidad: String):Observable<Producto>{
+    return this.httpClient.put<Producto>(this.URL_API+"/mover/"+idProducto,{"desde":desde,"hasta": hasta,"cantidad":cantidad} ).pipe(
+      catchError(err =>{
+        console.log(err.error)
+        return throwError(err);
+      })
+    )
   }
 }
