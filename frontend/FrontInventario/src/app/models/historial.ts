@@ -2,14 +2,14 @@ export class Historial {
   cantidad: number;
   tipoMovimiento: String;
   responsable: String;
-  id_Producto: number;
+  id_Producto: String;
   createdAt: Date
 
   constructor(
     cantidad: number,
     tipoMovimiento: String,
     responsable: String,
-    id_Producto: number,
+    id_Producto: String,
     createdAt: Date
   ) {
     this.cantidad = cantidad;

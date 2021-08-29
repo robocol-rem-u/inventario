@@ -1,27 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Historial } from "../../models/historial";
+import { Historial } from '../../models/historial';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HistorialService {
-
   private URL_API = environment.baseUrl + 'historial';
 
-  constructor(private httpClient : HttpClient) { }
+  constructor(private httpClient: HttpClient) {}
 
+  getHistorialProduct(idProducto: string): Observable<Historial[]> {
+    console.warn(this.URL_API + '/' + idProducto);
+    return this.httpClient.get<Historial[]>(this.URL_API + '/' + idProducto);
+  }
 
-getHistorialProduct(idProducto: string):Observable<Historial[]>{
-  console.warn(this.URL_API+"/"+idProducto)
-  return this.httpClient.get<Historial[]>(this.URL_API+"/"+idProducto);
+  createHistorial(historial: Historial): Observable<Historial> {
+    return this.httpClient.post<Historial>(this.URL_API, historial);
+  }
 }
-
-createHistorial(historial: Historial): Observable <Historial>{
-  return this.httpClient.post<Historial>(this.URL_API,historial)
-}
-
-}
-

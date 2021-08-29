@@ -7,10 +7,11 @@ historialCtrl.getHistoriales = async (req, res) => {
     res.json(historiales)
 }
 historialCtrl.createHistorial = async (req, res) => {
+    console.log(req);
     const newHistorial = new Historial(req.body)
     console.log(newHistorial)
     await newHistorial.save()
-    res.send(newHistorial)
+    res.json(newHistorial)
 }
 historialCtrl.getHistorial = async (req, res) => {
     console.log(req.params)

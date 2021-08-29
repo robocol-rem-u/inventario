@@ -85,7 +85,7 @@ export class DisponibilidadComponent implements OnInit {
                 parseInt(cantidad.value),
                 tipoMovimiento,
                 localStorage.getItem('USER'),
-                parseInt(this.id_producto),
+                this.id_producto,
                 fecha
               )
             )
