@@ -36,8 +36,20 @@ Content-Type: application/json
     "tipoMovimiento": "desde a a b",
     "responsable": "yo", 
     "fecha": "2021-07-14T22:06:29.156Z" ,  
+    "id_producto": "60ef5fe530a37f8f2c4e995a", 
+    "createdAt": "2021-01-18T00:00:45.084Z"
+}
+
+#####
+POST http://localhost:5000/api/prestamos
+Content-Type: application/json
+
+{
+    "cantidad": "5",
+    "responsable": "yo", 
+    "fecha": "2021-07-14T22:06:29.156Z" ,  
     "id_producto": "60ef5fe530a37f8f2c4e995a"
-        
+
 
 }
 ###

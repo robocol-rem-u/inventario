@@ -39,7 +39,7 @@ loginUser(usuario: Usuario):Observable <JwtResponseUser>{
     tap((res: JwtResponseUser)=> {
       if (res){
         //guardar token
-        this.saveToken(res.accessToken, res.expiresIn)
+        this.saveToken(res.accessToken, res.expiresIn, usuario.usuarioUniandes)
       }
     })
   );
@@ -47,25 +47,23 @@ loginUser(usuario: Usuario):Observable <JwtResponseUser>{
 
 logout(): void {
   this.token = '';
-  localStorage.removeItem("ACCESS_TOKEN");
-  localStorage.removeItem("EXPIRES_IN");
+  localStorage.removeItem("USER")
   this.router.navigate(['/robocol/ingreso-usuario'])
 }
 
-private saveToken(token: string, expiresIn: string): void {
-  localStorage.setItem("ACCESS_TOKEN", token);
-  localStorage.setItem("EXPIRES_IN", expiresIn);
+private saveToken(token: string, expiresIn: string, usuario: string): void {
+  localStorage.setItem("USER", usuario);
   this.token = token;
 }
 
 private getToken(): string {
   if (!this.token) {
-    this.token = localStorage.getItem("ACCESS_TOKEN");
+    this.token = localStorage.getItem("USER");
   }
   return this.token;
 }
 loggedIn(): boolean{
   // si el token existe -> true
-  return !!localStorage.getItem('ACCESS_TOKEN')
+  return !!localStorage.getItem('USER')
 }
 }

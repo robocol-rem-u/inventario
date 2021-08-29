@@ -19,6 +19,8 @@ getHistorialProduct(idProducto: string):Observable<Historial[]>{
   return this.httpClient.get<Historial[]>(this.URL_API+"/"+idProducto);
 }
 
-
+createHistorial(historial): Observable <Historial>{
+  return this.httpClient.post<Historial>(this.URL_API,historial)
+}
 }
 
