@@ -61,6 +61,7 @@ export class DisponibilidadComponent implements OnInit {
     hasta: HTMLSelectElement,
     cantidad: HTMLInputElement
   ) {
+    event?.preventDefault();
     console.log('move');
     this.toastr.info('Estamos procesando tu solicitud', 'Un momento', {
       timeOut: 0,
@@ -78,27 +79,40 @@ export class DisponibilidadComponent implements OnInit {
           this.producto = res;
           var tipoMovimiento = 'Desde ' + desde.value + ' hasta ' + hasta.value;
           const fecha = new Date();
-          this.crearMovimientoHistorial(
-            new Historial(
-              parseInt(cantidad.value),
-              tipoMovimiento,
-              'integrante',
-              parseInt(this.id_producto),
-              fecha
+          this.historialService
+            .createHistorial(
+              new Historial(
+                parseInt(cantidad.value),
+                tipoMovimiento,
+                localStorage.getItem('USER'),
+                parseInt(this.id_producto),
+                fecha
+              )
             )
-          );
-          this.toastr.clear();
-          console.log(res);
-          this.toastr.success(
-            'El producto fue movido correctamente',
-            '¡Listo!',
-            {
-              timeOut: 0,
-            }
-          );
-          setTimeout(() => {
-            window.location.reload();
-          }, 5000);
+            .subscribe(
+              (res) => {
+                this.toastr.clear();
+                console.log(res);
+                this.toastr.success(
+                  'El producto fue movido correctamente',
+                  '¡Listo!',
+                  {
+                    timeOut: 0,
+                  }
+                );
+                setTimeout(() => {
+                  window.location.reload();
+                }, 5000);
+              },
+              (error) => {
+                this.toastr.clear();
+                console.log(res);
+                this.toastr.error('Ups', error.message);
+                setTimeout(() => {
+                  window.location.reload();
+                }, 5000);
+              }
+            );
         },
         (error) => {
           this.toastr.clear();
@@ -173,7 +187,6 @@ export class DisponibilidadComponent implements OnInit {
   }
 
   crearMovimientoHistorial(historial: Historial) {
-    console.log('Funciona');
     this.historialService.createHistorial(historial);
     this.toastr.clear();
     this.toastr.success('Se creó el historial', '¡Listo!', {
