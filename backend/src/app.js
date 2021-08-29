@@ -11,7 +11,7 @@ const morgan = require("morgan")
 //DECLARACIONES
 const app = express()
 const cors = require("cors")
-/*
+
 // Serve static files
 app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario'));
 
@@ -19,7 +19,7 @@ app.use(express.static(__dirname + '../../../frontend/FrontInventario/dist/Front
 app.get('/robocol/*', function(req, res) {
   res.sendFile(path.join(__dirname + '../../../frontend/FrontInventario/dist/FrontInventario/index.html'));
 });
-*/
+
 app.use(express.static('build'));
 //ATRIBUTOS
 //Le damos el valor del puerto como una variable
