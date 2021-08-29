@@ -97,6 +97,13 @@ productosCtrl.createProducto = async (req, res) => {
             ACL: 'public-read'
         }
 
+        const params = {
+            Bucket: process.env.AWS_BUCKET_NAME,
+            Key: `${process.env.AWS_BUCKET_IMAGES_FOLDER}/${uuidv4()}.${fileType}`,
+            Body: myFile.data,
+            ACL: 'public-read'
+        }
+
         storageS3.upload(params, async (error, data) => {
             if(error){
                 res.status(500).send(error)
