@@ -3,7 +3,7 @@ import {HttpClient, HttpErrorResponse } from '@angular/common/http'
 import {Producto} from '../../models/producto';
 import { Historial } from "../../models/historial";
 import { Observable, throwError } from 'rxjs';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { Prestamo } from 'src/app/models/prestamo';
 import { catchError } from 'rxjs/operators';
 
