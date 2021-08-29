@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Usuario } from '../../models/usuario';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JwtResponseUser } from 'src/app/models/JwtResponseUser';
 import { tap } from 'rxjs/operators';

@@ -42,7 +42,7 @@ export class IngresoUsuarioComponent implements OnInit {
       }
       )
   }
-  
+
   darInfoUsuario(){
     return this.infoUsuario
   }
