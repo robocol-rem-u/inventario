@@ -152,7 +152,7 @@ productosCtrl.createProducto = async (req, res) => {
             Body: myFile.data,
             ACL: 'public-read'
         }
-
+        
         storageS3.upload(params, async (error, data) => {
             if(error){
                 res.status(500).send(error)

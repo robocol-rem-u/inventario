@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\brend\OneDrive\Documentos\inventario\frontend\FrontInventario\src\polyfills.ts */"hN/g");
+module.exports = __webpack_require__(/*! C:\Users\Alvaro\Documents\Universidad\Robocol\inventario real\inventario\frontend\FrontInventario\src\polyfills.ts */"hN/g");
 
 
 /***/ }),
